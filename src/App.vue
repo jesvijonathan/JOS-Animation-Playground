@@ -2,9 +2,11 @@
 import Loader from "@/components/loader.vue";
 import Home from "@/components/home.vue";
 import Navbar from "@/components/navbar.vue";
+import Intro from "@/components/intro.vue";
+import Hud from "@/components/hud.vue";
 import { ref } from "vue";
 
-const loader = ref(true);
+const loader = ref(false);
 onload = () => {
   setTimeout(() => {
     document.querySelector(".con").style.opacity = 0;
@@ -28,8 +30,10 @@ onload = () => {
       width="300"
     /> -->
   <Navbar />
+  <Hud />
   <Loader v-show="loader" />
   <Home />
+  <Intro />
 </template>
 
 <style scoped></style>
