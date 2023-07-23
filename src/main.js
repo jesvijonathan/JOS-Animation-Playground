@@ -1,14 +1,32 @@
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import { createApp } from "vue";
+import { watch, nextTick } from "vue";
+import { onMounted, onUnmounted, ref } from "vue";
 
-import App from './App.vue'
-import router from './router'
+import "jos-animation/dist/jos.css";
+import JOS from "jos-animation";
 
-import './assets/main.css'
+import "@fortawesome/fontawesome-free/css/all.css";
 
-const app = createApp(App)
+import App from "./App.vue";
+import router from "./router";
 
-app.use(createPinia())
-app.use(router)
+import "./assets/main.css";
+// jos.js and jos.css from jos plugin
+// import "jos/dist/jos.css";
 
-app.mount('#app')
+const app = createApp(App);
+
+// app.use(router);
+app.mount("#app");
+
+JOS.version();
+JOS.init();
+
+watch(
+  () => router.currentRoute.value,
+  () => {
+    nextTick(() => {
+      JOS.refresh();
+    });
+  }
+);
