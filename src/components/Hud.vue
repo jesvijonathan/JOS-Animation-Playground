@@ -29,6 +29,7 @@
   bottom: 5%;
   right: 3%;
   z-index: 1;
+  transition: all 1.4s 0.9s, background-color 0.1s 0s, color 0.1s 0s !important;
 }
 .scroll_down:hover {
   background-color: var(--grey);

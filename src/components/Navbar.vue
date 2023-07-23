@@ -68,7 +68,7 @@
 .jos_navbar_line {
   width: 0.1vw;
   height: 2.4vw;
-  background-color: white;
+  background-color: var(--color-primary);
   border-radius: 0.1vw;
 }
 .navbar_right {
@@ -105,7 +105,7 @@
   width: max-content;
   border-radius: 2vw;
   display: flex;
-  background-color: white;
+  background-color: var(--color-primary);
   color: black;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -116,7 +116,7 @@
 }
 .navbutton:hover {
   background-color: #f0f0f0;
-  color: black;
+  color: var(--grey);
   transition: 0.5s;
   text-decoration: underline;
 }
@@ -145,6 +145,6 @@
 .nav_circ:hover {
   background-color: #2d2d2d;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: var(--color-primary);
 }
 </style>

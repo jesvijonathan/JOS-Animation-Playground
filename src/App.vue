@@ -6,7 +6,7 @@ import Intro from "@/components/intro.vue";
 import Hud from "@/components/hud.vue";
 import { ref } from "vue";
 
-const loader = ref(false);
+const loader = ref(true);
 onload = () => {
   setTimeout(() => {
     document.querySelector(".con").style.opacity = 0;
