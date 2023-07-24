@@ -1,4 +1,18 @@
-<script setup></script>
+<script setup>
+const isDark = defineProps(["isDark"]);
+
+function toggleDarkMode(e) {
+  this.isDark = !this.isDark;
+  console.log(this.isDark);
+  if (this.isDark) {
+    document.body.classList.add("dark");
+    document.body.classList.remove("light");
+  } else {
+    document.body.classList.remove("dark");
+    document.body.classList.add("light");
+  }
+}
+</script>
 <template>
   <div class="navbar">
     <div class="navbar_left">
@@ -41,16 +55,15 @@
         >Docs</a
       >
       <a
-        href=""
-        target="_blank"
         class="navbutton nav_circ jos"
         data-jos_animation="zoom-down"
         data-jos_delay="0.4"
         data-jos_once="true"
+        @click="toggleDarkMode()"
         ><i class="fa-solid fa-moon"></i
       ></a>
       <a
-        href=""
+        href="https://github.com/jesvijonathan/JOS-Animation-Library"
         target="_blank"
         class="navbutton nav_circ jos"
         style="
@@ -75,6 +88,11 @@
   display: flex;
   gap: 2vw;
   letter-spacing: 0.1vw;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 .jos_title {
   font-size: 4vw;
@@ -105,17 +123,17 @@
   width: max-content;
   border-radius: 2vw;
   display: flex;
-  background-color: var(--color-primary);
-  color: black;
+  background-color: var(--grey);
+  color: var(--color-primary);
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   align-content: center;
-  padding: 1vw 2vw;
+  padding: 1.3vw 2vw;
 }
 .navbutton:hover {
-  background-color: #f0f0f0;
+  background-color: var(--milk);
   color: var(--grey);
   transition: 0.5s;
   text-decoration: underline;
@@ -137,14 +155,15 @@
   font-size: 1.4vw;
 }
 .nav_circ {
-  padding: 1vw 1vw;
+  padding: 1.4vw 1vw;
   text-decoration: none;
+  cursor: pointer;
   /* no delay for background and color */
   transition: all 0.4s 0.4s, background-color 0.1s 0s, color 0.1s 0s !important;
 }
 .nav_circ:hover {
-  background-color: #2d2d2d;
+  background-color: var(--color-primary);
   text-decoration: none;
-  color: var(--color-primary);
+  color: var(--color-background);
 }
 </style>

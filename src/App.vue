@@ -6,7 +6,7 @@ import Intro from "@/components/intro.vue";
 import Hud from "@/components/hud.vue";
 import { ref } from "vue";
 
-const loader = ref(true);
+const loader = ref(false);
 onload = () => {
   setTimeout(() => {
     document.querySelector(".con").style.opacity = 0;
@@ -19,6 +19,9 @@ onload = () => {
     }, 1500);
   }, 1000);
 };
+
+document.body.classList.add("dark");
+const isDark = ref(true);
 </script>
 
 <template>
@@ -29,7 +32,8 @@ onload = () => {
       height="300"
       width="300"
     /> -->
-  <Navbar />
+  <!-- pass isDark to navbar -->
+  <Navbar :isDark="isDark" />
   <Hud />
   <Loader v-show="loader" />
   <Home />

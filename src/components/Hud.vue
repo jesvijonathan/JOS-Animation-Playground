@@ -1,4 +1,9 @@
-<script setup></script>
+<script setup>
+function scrollToNext() {
+  const next = document.querySelector("#intro");
+  next.scrollIntoView({ behavior: "smooth" });
+}
+</script>
 
 <template>
   <div
@@ -6,6 +11,7 @@
     data-jos_duration="2"
     data-jos_animation="fade-down"
     data-jos_delay="0.9"
+    @click="scrollToNext()"
   >
     <i class="fa-solid fa-arrow-down"></i>
   </div>
@@ -13,15 +19,15 @@
 
 <style scoped>
 .scroll_down {
-  background-color: white;
-  height: 3vw;
-  width: 3vw;
+  background-color: var(--grey);
+  height: 3.4vw;
+  width: 3.4vw;
   border-radius: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
-  color: black;
+  color: var(--color-primary);
   font-size: 1.5vw;
   cursor: pointer;
   transition: 0.1s ease;
@@ -32,7 +38,7 @@
   transition: all 1.4s 0.9s, background-color 0.1s 0s, color 0.1s 0s !important;
 }
 .scroll_down:hover {
-  background-color: var(--grey);
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-background);
 }
 </style>

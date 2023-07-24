@@ -4,10 +4,11 @@
   --white: #ffffff;
   --black: #151515;
   --grey: #2d2d2d;
+  --milk: #f0f0f0;
 }
 
 /* semantic color variables for this project */
-:root {
+/* :root {
   --color-background: var(--white);
   --color-primary: var(--black);
 }
@@ -17,6 +18,16 @@
     --color-background: var(--black);
     --color-primary: var(--white);
   }
+} */
+.dark {
+  --color-background: var(--black);
+  --color-primary: var(--white);
+}
+.light {
+  --color-background: var(--white);
+  --color-primary: var(--black);
+  --grey: #f0f0f0;
+  --milk: #2d2d2d;
 }
 @font-face {
   font-family: "MedulaOne";
