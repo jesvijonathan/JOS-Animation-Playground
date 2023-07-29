@@ -17,38 +17,38 @@ function scrollToNext() {
           </div>
           <div class="foot_sec_2">
             <div class="foot_ser">
-              <div class="foot_ser_title">Service</div>
+              <div class="foot_ser_title">About JOS</div>
               <div class="foot_ser_content">
                 <ul>
-                  <li>Web Design</li>
-                  <li>Web Development</li>
-                  <li>Mobile App Development</li>
-                  <li>SEO</li>
-                  <li>Graphic Design</li>
+                  <li><a href="" target="_blank">About Us</a></li>
+                  <li><a href="" target="_blank">JOS Community</a></li>
+                  <li><a href="" target="_blank">Meet The Team</a></li>
+                  <li><a href="" target="_blank">Our Services</a></li>
+                  <li><a href="" target="_blank">Blog & News</a></li>
                 </ul>
               </div>
             </div>
             <div class="foot_ser">
+              <div class="foot_ser_title">Useful Links</div>
+              <div class="foot_ser_content">
+                <ul>
+                  <li><a href="" target="_blank">JOS Powered Sites</a></li>
+                  <li><a href="" target="_blank">Tutorials Playlist</a></li>
+                  <li><a href="" target="_blank">Documentation</a></li>
+                  <li><a href="" target="_blank">Download</a></li>
+                  <li><a href="" target="_blank">View on Github</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="foot_ser" style="margin-right: 2vw">
               <div class="foot_ser_title">Support</div>
               <div class="foot_ser_content">
                 <ul>
-                  <li>Web Design</li>
-                  <li>Web Development</li>
-                  <li>Mobile App Development</li>
-                  <li>SEO</li>
-                  <li>Graphic Design</li>
-                </ul>
-              </div>
-            </div>
-            <div class="foot_ser">
-              <div class="foot_ser_title">Links</div>
-              <div class="foot_ser_content">
-                <ul>
-                  <li>Web Design</li>
-                  <li>Web Development</li>
-                  <li>Mobile App Development</li>
-                  <li>SEO</li>
-                  <li>Graphic Design</li>
+                  <li><a href="" target="_blank">Terms & Condition</a></li>
+                  <li><a href="" target="_blank">Report Issues</a></li>
+                  <li><a href="" target="_blank">Privacy Policy</a></li>
+                  <li><a href="" target="_blank">Contact Us</a></li>
+                  <li><a href="" target="_blank">FAQs</a></li>
                 </ul>
               </div>
             </div>
@@ -57,8 +57,10 @@ function scrollToNext() {
       </div>
       <div class="footer_content_2">
         <div class="footer_rec">
-          <div>JOS</div>
-          <div class="developer">Developed By Jesvi Jonathan</div>
+          <a href="" target="_blank">JOS</a>
+          <a class="developer" href="" target="_blank"
+            >Developed By Jesvi Jonathan</a
+          >
         </div>
       </div>
       <div class="footer_content_1">
@@ -82,9 +84,9 @@ function scrollToNext() {
 .foot_sec_2 {
   display: flex;
   flex-direction: row;
-  gap: 5vw;
+  gap: 7vw;
   margin: 1vw 0vw;
-  margin-right: 3vw;
+  margin-right: 3.5vw;
 }
 .foot_ser {
   display: flex;
@@ -113,6 +115,12 @@ function scrollToNext() {
   letter-spacing: initial;
   letter-spacing: 0.1vw;
   font-family: sans-serif;
+}
+.foot_ser .foot_ser_content ul li a {
+  color: var(--color-background);
+}
+.foot_ser .foot_ser_content ul li a:hover {
+  text-decoration: underline;
 }
 .circ_lo i {
   height: 2vw;
@@ -165,11 +173,11 @@ function scrollToNext() {
   color: var(--color-background);
   width: 80vw;
   margin-bottom: 2vw;
-  border-radius: 37% 0% 0% 0%;
+  border-radius: 50% 50% 0% 0%;
   border-bottom: 0.1vw solid var(--opa-black);
 }
 .footer_content_3 {
-  height: 40vh;
+  height: 41vh;
   width: 100vw;
   background-color: var(--color-primary);
   position: relative;
@@ -206,6 +214,9 @@ function scrollToNext() {
   font-weight: 100;
   font-size: 1.8vw;
   letter-spacing: 0.1vw;
+}
+.developer:hover {
+  font-weight: 900;
 }
 .footer_content_2 {
   height: 14vh;

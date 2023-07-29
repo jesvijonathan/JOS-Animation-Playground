@@ -1,13 +1,14 @@
 <script setup>
 import Loader from "@/components/loader.vue";
-import Home from "@/components/home.vue";
 import Navbar from "@/components/navbar.vue";
-import Intro from "@/components/intro.vue";
 import Hud from "@/components/hud.vue";
-import Footer from "@/components/footer.vue";
+
+import Home from "@/views/home.vue";
+import Intro from "@/views/intro.vue";
+import Footer from "@/views/footer.vue";
 import { ref } from "vue";
 
-const loader = ref(true);
+const loader = ref(false);
 onload = () => {
   setTimeout(() => {
     document.querySelector(".con").style.opacity = 0;
@@ -27,16 +28,17 @@ const isDark = ref(true);
 
 <template>
   <!-- <img
-      alt="Vue logo"
-      class="logo"
-      src="https://cdn.jsdelivr.net/gh/jesvijonathan/JOS-Animation-Library@master/res/logo/jos_default_white.svg"
-      height="300"
-      width="300"
-    /> -->
-  <!-- pass isDark to navbar -->
+    alt="Vue logo"
+    class="logo"
+    src="https://cdn.jsdelivr.net/gh/jesvijonathan/JOS-Animation-Library@master/res/logo/jos_default_white.svg"
+    height="300"
+    width="300"
+  /> -->
+
+  <Loader v-show="loader" />
   <Navbar :isDark="isDark" />
   <Hud />
-  <Loader v-show="loader" />
+
   <Home />
   <Intro />
   <Footer />

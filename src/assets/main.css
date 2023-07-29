@@ -1,1 +1,6 @@
 @import "./base.css";
+
+/* all elements under jos-no-display */
+.jos-no-display * {
+  display: none !important;
+}
