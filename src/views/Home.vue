@@ -39,25 +39,29 @@
     </div>
     <div class="home_showcase">
       <div class="showcase jos">
-        <div class="showcase_it piece_1"></div>
+        <a href="" target="_blank" class="showcase_it piece_1"></a>
 
-        <div class="showcase_it piece_2"></div>
+        <a href="" target="_blank" class="showcase_it piece_2"></a>
 
-        <div class="showcase_it piece_3"></div>
+        <a href="" target="_blank" class="showcase_it piece_3"></a>
 
-        <div class="showcase_it piece_4"></div>
+        <a href="" target="_blank" class="showcase_it piece_4"></a>
 
-        <div class="showcase_it piece_5"></div>
+        <a href="" target="_blank" class="showcase_it piece_5"></a>
 
-        <div
+        <a
+          href=""
+          target="_blank"
           class="showcase_it piece_1 piece_7"
           style="animation-delay: 5s; bottom: -80%"
-        ></div>
+        ></a>
 
-        <div
+        <a
+          href=""
+          target="_blank"
           class="showcase_it piece_2 piece_6"
-          style="animation-delay: 5s; bottom: -40%; left: 10%; width: 14vw"
-        ></div>
+          style="animation-delay: 5s; bottom: -36%; left: 10%; width: 16vw"
+        ></a>
       </div>
     </div>
   </section>
@@ -108,7 +112,7 @@
 .piece_4 {
   width: 25vw;
   height: 20vw;
-  bottom: -100%;
+  bottom: -90%;
   left: 30%;
   z-index: 1;
   background-color: #9c9c9c;
@@ -123,7 +127,7 @@
 .piece_5 {
   width: 25vw;
   height: 17vw;
-  bottom: -135%;
+  bottom: -133%;
   left: 20%;
   background-image: url("@/assets/floating_websites/web4.png");
   background-size: cover;
@@ -149,6 +153,12 @@
   border: 0.1vw solid rgb(0, 0, 0, 0.5);
   /* animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 1); */
   animation-duration: 15s;
+}
+.showcase_it:hover {
+  animation-play-state: paused;
+  transition: 0.2s ease;
+  border: 0.1vw solid rgba(255, 255, 255, 0.8);
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.8)) brightness(1.2);
 }
 /* scroll animation */
 @keyframes showcase {
@@ -178,7 +188,7 @@
 }
 .showcase {
   width: 40vw;
-  height: 90vh;
+  height: 100vh;
   border: 0px solid var(--color-primary);
 }
 .home_but {
