@@ -8,7 +8,7 @@ import Intro from "@/views/intro.vue";
 import Footer from "@/views/footer.vue";
 import { ref } from "vue";
 
-const loader = ref(false);
+const loader = ref(true);
 onload = () => {
   setTimeout(() => {
     document.querySelector(".con").style.opacity = 0;
@@ -36,10 +36,10 @@ const isDark = ref(true);
   /> -->
 
   <Loader v-show="loader" />
-  <Navbar :isDark="isDark" />
+  <Navbar v-show="!loader" :isDark="isDark" />
   <Hud />
 
-  <Home />
+  <Home v-show="!loader" />
   <Intro />
   <Footer />
 </template>
