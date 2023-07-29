@@ -38,7 +38,11 @@
       </div>
     </div>
     <div class="home_showcase">
-      <div class="showcase jos">
+      <div
+        class="showcase jos"
+        data-jos_duration="0.5"
+        data-jos_animation="zoom"
+      >
         <a href="" target="_blank" class="showcase_it piece_1"></a>
 
         <a href="" target="_blank" class="showcase_it piece_2"></a>
