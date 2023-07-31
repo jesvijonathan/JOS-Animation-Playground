@@ -11,7 +11,12 @@ import web8 from "@/assets/floating_websites/web8.png";
 </script>
 
 <template>
-  <section id="home">
+  <section
+    id="home"
+    class="jos"
+    data-jos_animation="no-transition"
+    data-jos_invoke="hide_fixed"
+  >
     <div class="home_title">
       <div
         class="jos"
