@@ -9,7 +9,7 @@ import Intro from "@/views/intro.vue";
 import Footer from "@/views/footer.vue";
 import { ref } from "vue";
 
-const loader = ref(false);
+const loader = ref(true);
 onload = () => {
   setTimeout(() => {
     document.querySelector(".con").style.opacity = 0;
@@ -27,8 +27,6 @@ onload = () => {
   let tooltips = document.getElementById("mouse-tooltip");
   let tooltipText = document.getElementById("tooltip-text");
   const halfWindowWidth = window.innerWidth / 2;
-  const tooltipWidth = tooltips.offsetWidth;
-  const tooltipHeight = tooltips.offsetHeight;
 
   document.addEventListener("mouseover", (e) => {
     if (e.target.dataset.hover_data) {
@@ -40,6 +38,8 @@ onload = () => {
   });
 
   document.addEventListener("mousemove", (event) => {
+    const tooltipWidth = tooltips.offsetWidth;
+    const tooltipHeight = tooltips.offsetHeight;
     if (
       event.clientX < tooltipWidth / 2 ||
       event.clientX > window.innerWidth - tooltipWidth / 2
@@ -122,7 +122,7 @@ window["heading"] = heading;
   transform: translateX(-50%);
   position: fixed;
   z-index: 3;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   font-size: 1vw;
