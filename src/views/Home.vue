@@ -1,11 +1,25 @@
 <script setup>
 //"@/assets/floating_websites/web1"
+import web1 from "@/assets/floating_websites/web1.png";
+import web2 from "@/assets/floating_websites/web2.png";
+import web3 from "@/assets/floating_websites/web3.png";
+import web4 from "@/assets/floating_websites/web4.png";
+import web5 from "@/assets/floating_websites/web5.png";
+import web6 from "@/assets/floating_websites/web6.png";
+import web7 from "@/assets/floating_websites/web7.png";
+import web8 from "@/assets/floating_websites/web8.png";
 </script>
 
 <template>
   <section id="home">
     <div class="home_title">
-      <div class="jos" data-jos_animation="no-display">
+      <div
+        class="jos"
+        data-jos_animation="no-display"
+        data-jos_invoke="heading"
+        data-intro_title="Introduction"
+        style="margin-top: 4vw"
+      >
         <div style="display: flex" class="jos" data-jos_animation="fade-right">
           <div class="jos" data-jos_animation="flip-down">So</div>
           <div class="jos" data-jos_animation="flip-down" data-jos_delay="0.5">
@@ -40,7 +54,7 @@
     <div class="home_showcase">
       <div
         class="showcase jos"
-        data-jos_duration="0.5"
+        data-jos_duration="0.6"
         data-jos_animation="zoom"
       >
         <a href="" target="_blank" class="showcase_it piece_1"></a>
@@ -77,7 +91,7 @@
   height: 14vw;
   bottom: -20%;
   left: 0%;
-  background-image: url("@/assets/floating_websites/web8.png");
+  background-image: url("@/assets/floating_websites/web1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -163,6 +177,7 @@
   transition: 0.2s ease;
   border: 0.1vw solid rgba(255, 255, 255, 0.8);
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.8)) brightness(1.2);
+  z-index: 2;
 }
 /* scroll animation */
 @keyframes showcase {

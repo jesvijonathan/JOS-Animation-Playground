@@ -11,12 +11,36 @@ function scrollToNext() {
       <div class="footer_content_3">
         <div class="footer_rec1">
           <div class="foot_sec_1">
-            <a class="circ_lo"> <i class="fa-brands fa-github"></i></a>
-            <a class="circ_lo"> <i class="fa-brands fa-codepen"></i></a>
-            <a class="circ_lo"> <i class="fa-brands fa-npm"></i></a>
+            <a
+              class="circ_lo jos"
+              data-jos_invoke="heading"
+              data-intro_title="Footer"
+              data-jos_animation="flip"
+              data-jos_delay="0"
+            >
+              <i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              class="circ_lo jos"
+              data-jos_animation="flip"
+              data-jos_delay="0.1"
+            >
+              <i class="fa-brands fa-codepen"></i
+            ></a>
+            <a
+              class="circ_lo jos"
+              data-jos_animation="flip"
+              data-jos_delay="0.2"
+            >
+              <i class="fa-brands fa-npm"></i
+            ></a>
           </div>
           <div class="foot_sec_2">
-            <div class="foot_ser">
+            <div
+              class="foot_ser jos"
+              data-jos_animation="fade-left"
+              data-jos_delay="0"
+            >
               <div class="foot_ser_title">About JOS</div>
               <div class="foot_ser_content">
                 <ul>
@@ -28,7 +52,11 @@ function scrollToNext() {
                 </ul>
               </div>
             </div>
-            <div class="foot_ser">
+            <div
+              class="foot_ser jos"
+              data-jos_animation="fade-left"
+              data-jos_delay="0.1"
+            >
               <div class="foot_ser_title">Useful Links</div>
               <div class="foot_ser_content">
                 <ul>
@@ -40,7 +68,12 @@ function scrollToNext() {
                 </ul>
               </div>
             </div>
-            <div class="foot_ser" style="margin-right: 2vw">
+            <div
+              class="foot_ser jos"
+              data-jos_animation="fade-left"
+              data-jos_delay="0.2"
+              style="margin-right: 2vw"
+            >
               <div class="foot_ser_title">Support</div>
               <div class="foot_ser_content">
                 <ul>
@@ -56,7 +89,7 @@ function scrollToNext() {
         </div>
       </div>
       <div class="footer_content_2">
-        <div class="footer_rec">
+        <div class="footer_rec jos" data-jos_animation="stretch">
           <a href="" target="_blank">JOS</a>
           <a class="developer" href="" target="_blank"
             >Developed By Jesvi Jonathan</a
@@ -177,7 +210,7 @@ function scrollToNext() {
   border-bottom: 0.1vw solid var(--opa-black);
 }
 .footer_content_3 {
-  height: 41vh;
+  height: 22vw;
   width: 100vw;
   background-color: var(--color-primary);
   position: relative;
@@ -219,7 +252,7 @@ function scrollToNext() {
   font-weight: 900;
 }
 .footer_content_2 {
-  height: 14vh;
+  height: 7vw;
   width: 100vw;
   background-color: var(--color-primary);
   position: relative;
@@ -244,7 +277,7 @@ function scrollToNext() {
   background-color: var(--color-background);
 }
 .footer_content_1 {
-  height: 8vh;
+  height: 4vw;
   width: 100vw;
   background-color: var(--color-primary);
   position: relative;
@@ -276,7 +309,7 @@ function scrollToNext() {
   bottom: 0;
 }
 .actual_footer1 {
-  height: 40vh;
+  height: 20vw;
   width: 100vw;
   background: rgb(255, 255, 255);
   /* bottom */
@@ -285,7 +318,7 @@ function scrollToNext() {
   border-radius: 77% 23% 100% 0% / 60% 100% 0% 40%;
 }
 .actual_footer2 {
-  height: 20vh;
+  height: 10vw;
   width: 100vw;
   background: white;
   /* bottom */

@@ -1,5 +1,5 @@
 <script setup>
-const isDark = defineProps(["isDark"]);
+defineProps(["isDark", "navTitle"]);
 
 function toggleDarkMode(e) {
   this.isDark = !this.isDark;
@@ -32,7 +32,7 @@ function toggleDarkMode(e) {
         data-jos_once="true"
       >
         <div class="jos_navbar_line"></div>
-        <a href="#">Introduction</a>
+        <a href="#" id="nav_title">{{ navTitle }}</a>
       </div>
     </div>
 
@@ -44,6 +44,7 @@ function toggleDarkMode(e) {
         data-jos_animation="zoom-down"
         data-jos_delay="0.2"
         data-jos_once="true"
+        data-hover_data="A playground to test out the animations"
         >Playground</a
       >
       <a
@@ -52,6 +53,7 @@ function toggleDarkMode(e) {
         data-jos_animation="zoom-down"
         data-jos_delay="0.3"
         data-jos_once="true"
+        data-hover_data="Check out the docs"
         >Docs</a
       >
       <a
