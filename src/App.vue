@@ -12,7 +12,7 @@ import About from "@/views/about.vue";
 import { ref } from "vue";
 
 // Loader
-const loader = ref(false);
+const loader = ref(true);
 onload = () => {
   setTimeout(() => {
     document.querySelector(".con").style.opacity = 0;
@@ -72,26 +72,6 @@ function heading(e) {
   navTitle.value = e.dataset.intro_title;
 }
 window["heading"] = heading;
-
-// fixed sidebar
-onload = () => {
-  let intro_1 = document.getElementById("intro_1");
-  let intro_2 = document.getElementById("intro_2");
-  let intro_4 = document.getElementById("intro_4");
-
-  function show_fixed() {
-    // intro_1.classList.add("show_fixed");
-    // intro_2.style.margin = "10vw 0vw 10vw 35vw";
-    // intro_4.style.margin = "10vw 0vw 10vw 35vw";
-  }
-  function hide_fixed() {
-    // intro_1.classList.remove("show_fixed");
-    // intro_2.style.margin = "10vw 0vw 10vw 10vw";
-    // intro_4.style.margin = "10vw 0vw 10vw 10vw";
-  }
-  window["show_fixed"] = show_fixed;
-  window["hide_fixed"] = hide_fixed;
-};
 </script>
 
 <template>
@@ -101,7 +81,7 @@ onload = () => {
   <ToolTips />
 
   <Home v-show="!loader" />
-  <Intro />
+  <Intro v-show="!loader" />
 
   <!-- <About /> -->
   <!--   <Features /> -->
@@ -109,7 +89,7 @@ onload = () => {
   <!-- Trigger Animation -->
   <!-- Project List -->
 
-  <Footer />
+  <Footer v-show="!loader" />
 </template>
 
 <style scoped></style>
