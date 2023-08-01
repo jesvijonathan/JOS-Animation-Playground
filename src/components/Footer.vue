@@ -1,12 +1,7 @@
-<script setup>
-function scrollToNext() {
-  const next = document.querySelector("#intro");
-  next.scrollIntoView({ behavior: "smooth" });
-}
-</script>
+<script setup></script>
 
 <template>
-  <section class="footer">
+  <section class="footer" id="footer">
     <div class="actual_footer_con">
       <div class="footer_content_3">
         <div class="footer_rec1">
@@ -15,6 +10,7 @@ function scrollToNext() {
               class="circ_lo jos"
               data-jos_invoke="heading"
               data-intro_title="Footer"
+              data-nextScroll="footer"
               data-jos_animation="flip"
               data-jos_delay="0"
             >

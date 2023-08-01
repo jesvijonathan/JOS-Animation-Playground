@@ -1,6 +1,11 @@
 <script setup>
-function scrollToNext() {
-  const next = document.querySelector("#intro");
+import { defineProps } from "vue";
+
+let { moveToID } = defineProps(["moveToID"]);
+
+function scrollToNext(e) {
+  console.log(e.dataset);
+  const next = document.querySelector("#" + e.dataset.hover_data);
   next.scrollIntoView({ behavior: "smooth" });
 }
 </script>
@@ -11,7 +16,8 @@ function scrollToNext() {
     data-jos_duration="2"
     data-jos_animation="fade-down"
     data-jos_delay="0.9"
-    @click="scrollToNext()"
+    :data-hover_data="moveToID"
+    @click="scrollToNext(this.$el)"
   >
     <i class="fa-solid fa-arrow-down"></i>
   </div>

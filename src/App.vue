@@ -12,7 +12,7 @@ import About from "@/views/about.vue";
 import { ref } from "vue";
 
 // Loader
-const loader = ref(true);
+const loader = ref(false);
 onload = () => {
   setTimeout(() => {
     document.querySelector(".con").style.opacity = 0;
@@ -66,10 +66,14 @@ onload = () => {
 document.body.classList.add("dark");
 const isDark = ref(true);
 
+// moveTo
+const moveToID = ref("features");
+
 // Header
 const navTitle = ref("Home");
 function heading(e) {
   navTitle.value = e.dataset.intro_title;
+  moveToID.value = e.dataset.nextscroll;
 }
 window["heading"] = heading;
 </script>
@@ -77,7 +81,7 @@ window["heading"] = heading;
 <template>
   <Loader v-show="loader" />
   <Navbar v-show="!loader" :isDark="isDark" :navTitle="navTitle" />
-  <Hud />
+  <Hud :moveToID="moveToID" />
   <ToolTips />
 
   <Home v-show="!loader" />

@@ -5,14 +5,12 @@ import { onMounted, onUpdated } from "vue";
 
 onMounted(() => {
   let fix_elem = document.getElementById("intro_1");
-  let section = document.getElementById("intro");
+  let section = document.getElementById("features");
   let box = document.getElementById("box2");
   function scroll_rel(e) {
-    //receive 0-1 scroll progress convert to 0 - 20 scale
-    let scroll = 1 - e.jos.scrollProgress * 1.2;
+    const scroll = (1 - e.jos.scrollProgress).toFixed(2);
     box.style.transform = "scale(" + scroll + ")";
-    console.log(scroll);
-    box.innerHTML = ((1 - e.jos.scrollProgress) * 100).toFixed(2) + "%";
+    box.innerHTML = scroll + "%";
   }
 
   window["scroll_rel"] = scroll_rel;
@@ -20,7 +18,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="intro">
+  <section id="features">
     <div class="intro_cont">
       <div id="intro_1" class="intro_1">
         <div
@@ -37,8 +35,7 @@ onMounted(() => {
           class="box jos"
           id="box2"
           data-jos_animation="stretch"
-          data-jos_rootMargin_bottom="0%"
-          data-jos_rootMargin_top="0%"
+          data-jos_rootMargin="20% 0% 20% 0%"
           data-jos_scroll="scroll_rel"
         ></div>
       </div>
@@ -58,6 +55,7 @@ onMounted(() => {
               class="intro_desc jos"
               data-jos_animation="no-transition"
               data-jos_invoke="heading"
+              data-nextScroll="footer"
               data-intro_title="Features"
             >
               Scroll trigger work when element intersects a margin in the view
@@ -85,6 +83,7 @@ onMounted(() => {
               class="intro_desc jos"
               data-jos_animation="no-transition"
               data-jos_invoke="heading"
+              data-nextScroll="footer"
               data-intro_title="Features"
             >
               This feature enables the capability for adding scroll based
@@ -121,6 +120,7 @@ onMounted(() => {
   justify-content: center;
   align-content: center;
   font-size: 1.8vw;
+  transition: 0s;
 }
 #box2 {
   margin-top: 0vw;
@@ -211,7 +211,7 @@ onMounted(() => {
   align-content: space-between;
   justify-content: flex-end;
 }
-#intro {
+#features {
   width: 100vw;
   background-color: var(--color-background);
   position: relative;

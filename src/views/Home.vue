@@ -11,17 +11,13 @@ import web8 from "@/assets/floating_websites/web8.png";
 </script>
 
 <template>
-  <section
-    id="home"
-    class="jos"
-    data-jos_animation="no-transition"
-    data-jos_invoke="hide_fixed"
-  >
+  <section id="introduction">
     <div class="home_title">
       <div
         class="jos"
         data-jos_animation="no-display"
         data-jos_invoke="heading"
+        data-nextScroll="features"
         data-intro_title="Introduction"
         style="margin-top: 4vw"
       >
@@ -238,7 +234,7 @@ import web8 from "@/assets/floating_websites/web8.png";
   color: var(--color-background);
 }
 
-#home {
+#introduction {
   width: 100vw;
   height: 100vh;
   background-color: var(--color-background);
