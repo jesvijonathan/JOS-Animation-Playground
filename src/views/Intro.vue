@@ -69,6 +69,10 @@ onMounted(() => {
               comes with a lot more customizable attributes and options to tweak
               and fiddle with.
             </div>
+            <div class="feature_button">
+              <button class="button">Demo</button>
+              <button class="button">Documentation</button>
+            </div>
           </div>
         </div>
         <div class="cont">
@@ -96,6 +100,10 @@ onMounted(() => {
               animation features are all packaged into a single library and
               comes in a very light weight (2kb) package...
             </div>
+            <div class="feature_button">
+              <button class="button">Docs</button>
+              <button class="button">Demonstration</button>
+            </div>
           </div>
         </div>
       </div>
@@ -104,11 +112,32 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.feature_button {
+  margin-top: 2vw;
+  display: flex;
+  gap: 2vw;
+}
+.button {
+  background: transparent;
+  color: var(--color-primary);
+  padding: 0.5vw 1vw;
+  border-radius: 0.5vw;
+  font-size: 1.2vw;
+  font-weight: 600;
+  letter-spacing: 0.1vw;
+  cursor: pointer;
+  border: 0.1vw solid var(--color-primary);
+  transition: 0.2s;
+}
+.button:hover {
+  background: var(--color-primary);
+  color: var(--color-background);
+}
 .gap {
-  height: 17vw;
+  height: 20vw;
 }
 .box {
-  margin-top: 10vw;
+  margin-top: 15vw;
   width: 30vw;
   height: 20vw;
   display: flex;
@@ -129,7 +158,7 @@ onMounted(() => {
   margin: 10vw 0vw 5vw 3vw;
   display: flex;
   flex-direction: column;
-  gap: 10vw;
+  gap: 8vw;
   /* height: 100%; */
   align-items: center;
   justify-content: center;
@@ -216,7 +245,7 @@ onMounted(() => {
   background-color: var(--color-background);
   position: relative;
   overflow: hidden;
-  background-color: rgb(30, 30, 30);
+  background-color: var(--grey2);
 }
 section {
   width: 100vw;
@@ -225,7 +254,7 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 0;
-  background-color: rgba(30, 30, 30, 0);
+  background-color: var(--color-background);
 }
 section * {
   transition: all 0s, background-color 0.7s ease;

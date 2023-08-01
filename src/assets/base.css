@@ -4,6 +4,7 @@
   --white: #ffffff;
   --black: #151515;
   --grey: #2d2d2d;
+  --grey2: rgb(30, 30, 30);
   --opa-black: rgba(0, 0, 0, 0.3);
   --milk: #f0f0f0;
 }
@@ -29,6 +30,7 @@
   --color-primary: var(--black);
   --grey: #f0f0f0;
   --milk: #2d2d2d;
+  --grey2: rgb(227, 227, 227);
 }
 @font-face {
   font-family: "MedulaOne";

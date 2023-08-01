@@ -7,8 +7,11 @@ import Footer from "@/components/footer.vue";
 // import Noise from "@/components/noise.vue";
 
 import Home from "@/views/home.vue";
-import Intro from "@/views/intro.vue";
 import About from "@/views/about.vue";
+import Intro from "@/views/intro.vue";
+import Features from "@/views/features.vue";
+import Projects from "@/views/projects.vue";
+
 import { ref } from "vue";
 
 // Loader
@@ -33,9 +36,11 @@ onload = () => {
   const halfWindowWidth = window.innerWidth / 2;
 
   document.addEventListener("mouseover", (e) => {
-    if (e.target.dataset.hover_data) {
+    let mose_data = e.target.dataset.hover_data;
+    if (mose_data) {
+      e.target.dataset.hover_data;
       tooltips.style.display = "flex";
-      tooltipText.textContent = e.target.dataset.hover_data;
+      tooltipText.textContent = mose_data;
     } else {
       tooltips.style.display = "none";
     }
@@ -76,6 +81,10 @@ function heading(e) {
   moveToID.value = e.dataset.nextscroll;
 }
 window["heading"] = heading;
+function alertt() {
+  alert("Asd");
+}
+window["alertt"] = alertt;
 </script>
 
 <template>
@@ -85,13 +94,13 @@ window["heading"] = heading;
   <ToolTips />
 
   <Home v-show="!loader" />
+
+  <About />
+
   <Intro v-show="!loader" />
 
-  <!-- <About /> -->
-  <!--   <Features /> -->
-  <!-- progress animation -->
-  <!-- Trigger Animation -->
-  <!-- Project List -->
+  <Features />
+  <Projects />
 
   <Footer v-show="!loader" />
 </template>
