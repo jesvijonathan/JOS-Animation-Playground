@@ -7,6 +7,7 @@ import Footer from "@/components/footer.vue";
 // import Noise from "@/components/noise.vue";
 
 import Home from "@/views/home.vue";
+import Brochure from "@/views/brochure.vue";
 import About from "@/views/about.vue";
 import Intro from "@/views/intro.vue";
 import Features from "@/views/features.vue";
@@ -75,6 +76,58 @@ onload = () => {
 
     tooltips.style.transform = `translateX(${clientX.value}) translateY(${clientY.value})`;
   });
+
+  // if mobile block website
+  if (window.innerWidth < 600) {
+    //   document.innerHTML = `  <div
+    //   style='
+    //     height: 100%;
+    //     width: 100%;
+    //     font-size: 3vw;
+    //     font-family: 'Poppins', sans-serif;
+    //     font-weight: 600;
+    //     left: 50%;
+    //     top: 50%;
+    //     transform: translate(-50%, -50%);
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+
+    //     color: var(--color-text);
+    //     z-index: 10;
+    //     position: fixed;
+    //     background: var(--color-background);
+    //   '
+    // >
+    //   Sorry, this website is not available on mobile devices.
+    // </div>`;
+    document.body.innerHTML = `<div style='
+    height: 100%;
+        width: 100%;
+        font-size: 3vw;
+        font-family: Poppins, sans-serif;
+        font-weight: 600;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: var(--color-text);
+        z-index: 10;
+        position: fixed;
+        flex-direction: column;
+        text-align: center;
+        background: var(--color-background);
+  '>
+    Sorry, this website is not available on mobile devices.
+    <br/><br/>
+    Use a desktop or laptop to view this website.
+    
+    <a style="margin-top:14vh" href="https://jesvijonathan.github.io/JOS-Animation-Library/"><u>Click to view JOS Demo (old)</u></a>
+  </div>`;
+  }
 };
 
 // Theme
@@ -104,13 +157,14 @@ window["alertt"] = alertt;
   <ToolTips />
 
   <Home v-show="!loader" />
-  <Features />
+  <Brochure />
   <Intro v-show="!loader" />
   <About />
 
   <!-- <Projects /> -->
 
-  <Footer v-show="!loader" />
+  <Features />
+  <Footer v-show="!loader" FooterNote="Shut Up & Use It Already !" />
 </template>
 
 <style scoped></style>

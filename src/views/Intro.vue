@@ -18,7 +18,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="features">
+  <section id="demo">
     <div class="intro_cont">
       <div id="intro_1" class="intro_1">
         <div
@@ -56,7 +56,7 @@ onMounted(() => {
               data-jos_animation="no-transition"
               data-jos_invoke="heading"
               data-nextScroll="footer"
-              data-intro_title="Features"
+              data-intro_title="Demo"
             >
               Scroll trigger work when element intersects a margin in the view
               port. This allows users to to animate an element with reference to
@@ -88,7 +88,7 @@ onMounted(() => {
               data-jos_animation="no-transition"
               data-jos_invoke="heading"
               data-nextScroll="footer"
-              data-intro_title="Features"
+              data-intro_title="Demo"
             >
               This feature enables the capability for adding scroll based
               animation that works with respect to scroll percent of element.

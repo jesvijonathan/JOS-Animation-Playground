@@ -1,7 +1,20 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+
+import { defineProps } from "vue";
+const { FooterNote } = defineProps(["FooterNote"]);
+</script>
 
 <template>
   <section class="footer" id="footer">
+    <div
+      class="jos byebye"
+      data-jos_rootMargin_bottom="60%"
+      data-jos_animation="static"
+      data-jos_animationInverse="byeanime"
+    >
+      {{ FooterNote }}
+    </div>
     <div class="actual_footer_con">
       <div class="footer_content_3">
         <div class="footer_rec1">
@@ -206,7 +219,7 @@
   border-bottom: 0.1vw solid var(--opa-black);
 }
 .footer_content_3 {
-  height: 22vw;
+  height: 21vw;
   width: 100vw;
   background-color: var(--color-primary);
   position: relative;
@@ -294,10 +307,36 @@
 }
 .footer {
   width: 100vw;
-  height: 100vh;
+  height: 64vh;
   background-color: var(--color-background);
   position: relative;
   overflow: hidden;
+}
+.byebye {
+  font-size: 2.1vw;
+  font-family: Poppins, sans-serif;
+  font-weight: 900;
+  width: fit-content;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  padding: 1vw 1vw;
+  text-align: center;
+  font-size: 2.1vw;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  display: none;
+}
+
+@keyframes bg {
+  0% {
+  }
+  50% {
+    letter-spacing: 0.5vw;
+  }
+}
+.jos-byeanime {
+  animation: bg 5s infinite;
 }
 
 .actual_footer_con {

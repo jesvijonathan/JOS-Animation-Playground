@@ -13,58 +13,46 @@
     <!-- Very easy & straight forward to use -->
 
     <div class="features">
-      <div class="features-container">
-        <div class="features-title">Features</div>
-        <div class="features-list">
-          <div class="features-list-item">
-            <!-- box image -->
-            <img class="fe_img" src="https://picsum.photos/200/200" alt="" />
-            <div class="features-list-item-title">Lightweight</div>
-            <div class="features-list-item-text">
-              The library is less than 2kb, and it does not require any plugin
-              addons to gain features.
-            </div>
-          </div>
-          <div class="features-list-item">
-            <img class="fe_img" src="https://picsum.photos/200/200" alt="" />
-            <div class="features-list-item-title">Customizability</div>
-            <div class="features-list-item-text">
-              You can build really complex animations and sequences.
-            </div>
-          </div>
-          <div class="features-list-item">
-            <img class="fe_img" src="https://picsum.photos/200/200" alt="" />
-            <div class="features-list-item-title">Easy to use</div>
-            <div class="features-list-item-text">
-              The library is very easy and straight forward to use.
-            </div>
-          </div>
-          <div class="features-list-item">
-            <img class="fe_img" src="https://picsum.photos/200/200" alt="" />
-            <div class="features-list-item-title">Open Source</div>
-            <div class="features-list-item-text">
-              The library is open source, you can check the source code on
-              github.
-            </div>
-          </div>
-        </div>
-      </div>
       <!-- works with html/js, react, vue, angular & other frameworks-->
       <div class="features-container">
-        <div class="features-title">Works with</div>
+        <div class="features-title">Wider Compatibility</div>
         <!-- place icons of frameworks here -->
         <div class="features_frameowrk">
-          <div class="framework">
-            <i class="frbramd fa-brands fa-html5"></i>HTML/JS
+          <div
+            class="framework jos"
+            data-jos_duration="0.5"
+            data-jos_rootMargin_bottom="80%"
+            data-jos_animation="framework-colored"
+          >
+            <i class="frbramd fa-brands fa-html5"></i>
+            <div class="frmt">HTML/JS</div>
           </div>
-          <div class="framework">
-            <i class="frbramd fa-brands fa-vuejs"></i>Vue
+          <div
+            class="framework jos"
+            data-jos_duration="0.5"
+            data-jos_rootMargin_bottom="76%"
+            data-jos_animation="framework-colored"
+          >
+            <i class="frbramd fa-brands fa-vuejs"></i>
+            <div class="frmt">Vue</div>
           </div>
-          <div class="framework">
-            <i class="frbramd fa-brands fa-angular"></i>Angular
+          <div
+            class="framework jos"
+            data-jos_duration="0.5"
+            data-jos_rootMargin_bottom="74%"
+            data-jos_animation="framework-colored"
+          >
+            <i class="frbramd fa-brands fa-angular"></i>
+            <div class="frmt">Angular</div>
           </div>
-          <div class="framework">
-            <i class="frbramd fa-brands fa-react"></i>React
+          <div
+            class="framework jos"
+            data-jos_duration="0.5"
+            data-jos_rootMargin_bottom="70%"
+            data-jos_animation="framework-colored"
+          >
+            <i class="frbramd fa-brands fa-react"></i>
+            <div class="frmt">React</div>
           </div>
         </div>
       </div>
@@ -77,7 +65,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 100%;
+  gap: 2.5vw;
   height: 100%;
 }
 .frbramd {
@@ -108,18 +96,30 @@
   width: 10vw;
   height: 10vw;
   border-radius: 1vw;
-  background-color: var(--color-background);
   transition: 0.2s ease;
   flex-wrap: nowrap;
   align-content: center;
-  gap: 1vw;
-  padding: 1vw;
-  border-top: 0.1vw solid var(--grey2);
   cursor: pointer;
+
+  border-top: 1vw solid transparent;
+  color: var(--color-primary);
+  padding-bottom: 1vw;
+  gap: 2vw;
+  color: transparent;
+}
+.frmt {
+  /* border-bottom: 0.2vw solid transparent; */
+  transition: 0.1s linear;
+}
+
+/* every text under framework */
+.framework:hover .frmt {
+  /* text-decoration: underline; */
+  /* border-bottom: 0.2vw solid white; */
 }
 .framework:hover {
   background-color: var(--grey2);
-  border-top: 0vw solid transparent;
+  color: var(--color-text);
 }
 section {
   width: 100vw;
@@ -131,7 +131,7 @@ section {
 }
 
 .features {
-  margin: 7vw 0vw;
+  margin: 5vw 0vw 8vw 0vw;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -151,7 +151,7 @@ section {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   color: var(--color-text);
-  margin-bottom: 5vw;
+  margin-bottom: 8vw;
 }
 .features-list {
   width: 100%;
@@ -200,5 +200,11 @@ section {
   width: 15vw;
   height: 15vw;
   margin-bottom: 2vw;
+}
+.jos-framework-colored {
+  border-top: 0.1vw solid var(--grey2);
+  /* background-color: var(--grey2); */
+  gap: 1.5vw;
+  color: var(--color-primary);
 }
 </style>

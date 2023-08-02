@@ -55,7 +55,7 @@ onMounted(() => {
       <div>
         <br />
         <!-- <div class="">This is a response, a work of art !</div> -->
-        <div class="">Get started in just a few steps</div>
+        <div class="started_t">Get started few steps</div>
         <div class="steps">
           <div
             class="step1 jos"
@@ -63,7 +63,15 @@ onMounted(() => {
             data-jos_scrollDirection="down"
             data-jos_rootMargin_bottom="35%"
           >
-            <div class="step1_title">1. Install JOS</div>
+            <div
+              class="step1_title jos"
+              data-jos_animation="no-transition"
+              data-jos_invoke="heading"
+              data-nextScroll="footer"
+              data-intro_title="Installation"
+            >
+              1. Install JOS
+            </div>
             <div class="step1_desc">
               JOS can be installed using npm, embeds, tags, etc. In this setup
               we will go with the most basic approach to get JOS up and running
@@ -206,7 +214,13 @@ onMounted(() => {
               <br /><br />
             </div>
             <div class="step_code_con">
-              <div class="step1_demo_text">
+              <div
+                class="step1_demo_text jos"
+                data-jos_animation="no-transition"
+                data-jos_invoke="heading"
+                data-nextScroll="footer"
+                data-intro_title="Installation"
+              >
                 Set class="jos" to the element you want to animate :
               </div>
               <div class="step1_demo">
@@ -247,6 +261,13 @@ onMounted(() => {
                 </button>
               </div>
             </div>
+          </div>
+
+          <div class="line"></div>
+          <div class="butvon">
+            <button class="Button_1">View Tutorials</button>
+            <button class="Button_1">Projects Using JOS</button>
+            <!-- <button class="Button_1">Feature Website</button> -->
           </div>
         </div>
       </div>
@@ -296,6 +317,37 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.line {
+  width: 60%;
+  height: 0.1vw;
+  background: var(--color-secondary);
+  opacity: 0.4;
+}
+.butvon {
+  display: flex;
+  gap: 2vw;
+}
+.Button_1 {
+  border: 0.1vw solid var(--color-primary);
+  border-radius: 7px;
+  background-color: transparent;
+  color: var(--color-primary);
+  font-size: 1.2vw;
+  font-weight: bold;
+  padding: 0.5vw 1vw;
+  cursor: pointer;
+  font-weight: 100;
+  transition: 0.3s;
+}
+.Button_1:hover {
+  color: var(--color-background);
+  background-color: var(--color-primary);
+}
+.started_t {
+  font-family: "Poppins", sans-serif;
+  font-size: 3vw;
+  letter-spacing: normal;
+}
 .more_details_title {
   width: 100%;
   display: flex;
@@ -318,14 +370,15 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  transition: 0.2s ease;
+  transition: 0.3s ease;
   flex-wrap: nowrap;
   align-content: center;
   padding: 0vw 1vw;
   gap: 1vw;
   transform: skew(-10deg);
   background-color: var(--grey2);
-  background-color: var(--color-background);
+  background-color: transparent;
+  color: var(--color-background);
 }
 .more_details {
   width: 100%;
@@ -342,21 +395,18 @@ onMounted(() => {
   margin-right: 1vw;
   font-size: 1.5vw;
   transition: 0.3s ease;
+  background-color: transparent;
+  color: var(--color-background);
 }
 
 .scroller:hover .aroh {
-  transform: translateX(-25vw);
+  transform: translateX(25vw);
 }
 .scroller:hover .more_text {
   transform: translateX(25vw);
 }
-.scrolling_text:hover {
-  border: 0vw solid var(--color-primary);
-  border: none;
-}
 
 .scroller {
-  transition: 0.1s ease-out;
   width: 150vw;
   height: fit-content;
   background-color: var(--black);
@@ -367,13 +417,19 @@ onMounted(() => {
   flex-wrap: nowrap;
   justify-content: flex-start;
   border: 0.3vw solid transparent;
+  padding: 1.4vw 0vw;
+  cursor: pointer;
 }
 .scrolling_text {
   border: none;
   border: 0vw solid var(--color-primary);
+  background-color: var(--color-primary);
+  transition: 0s ease-out;
+  margin: 0vw 0vw;
 }
 
 #scroller {
+  background-color: transparent;
   transition: 0.2s ease-out;
 }
 
