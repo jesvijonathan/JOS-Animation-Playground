@@ -157,14 +157,14 @@ window["alertt"] = alertt;
   <ToolTips />
 
   <Home v-show="!loader" />
-  <Brochure />
+  <Brochure v-show="!loader" />
   <Intro v-show="!loader" />
   <About />
 
   <!-- <Projects /> -->
 
   <Features />
-  <Footer v-show="!loader" FooterNote="Shut Up & Use It Already !" />
+  <Footer FooterNote="Shut Up & Use It Already !" />
 </template>
 
 <style scoped></style>
