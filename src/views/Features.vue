@@ -12,9 +12,15 @@
     <!-- Customizabilty, you can build really compolex animations and sequences -->
     <!-- Very easy & straight forward to use -->
 
-    <div class="features">
+    <div class="features" id="links">
       <!-- works with html/js, react, vue, angular & other frameworks-->
-      <div class="features-container">
+      <div
+        class="features-container jos"
+        data-jos_animation="no-transition"
+        data-jos_invoke="heading"
+        data-nextScroll="footer"
+        data-intro_title="Links"
+      >
         <div class="features-title">Wider Compatibility</div>
         <!-- place icons of frameworks here -->
         <div class="features_frameowrk">

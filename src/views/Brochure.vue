@@ -12,11 +12,18 @@
     <!-- Customizabilty, you can build really compolex animations and sequences -->
     <!-- Very easy & straight forward to use -->
 
-    <div class="features">
+    <div class="features" id="features">
       <div class="features-container">
         <div class="features-title">Features</div>
         <div class="features-list">
-          <div class="features-list-item">
+          <div
+            class="features-list-item jos"
+            data-jos_delay="0"
+            data-jos_duration="0.7"
+            data-jos_rootMargin_bottom="20%"
+            data-jos_scrollDirection="down"
+            data-jos_animation="flip"
+          >
             <!-- box image -->
 
             <img class="fe_img" src="@/assets/lightweight.jpg" alt="" />
@@ -25,18 +32,26 @@
               class="features-list-item-text jos"
               data-jos_animation="no-transition"
               data-jos_invoke="heading"
-              data-nextScroll="footer"
+              data-nextScroll="demo"
               data-intro_title="Features"
             >
               <!-- points -->
               <ul>
                 <li>Very lightweight, the library is &lt;2kb.</li>
                 <li>It does not require plugin addons to gain features.</li>
-                <li>Includes all the features you need.</li>
+                <li>Performance oriented & optimized.</li>
               </ul>
             </div>
           </div>
-          <div class="features-list-item">
+          <div class="line"></div>
+          <div
+            class="features-list-item jos"
+            data-jos_delay="0.2"
+            data-jos_duration="0.7"
+            data-jos_rootMargin_bottom="20%"
+            data-jos_scrollDirection="down"
+            data-jos_animation="flip"
+          >
             <img class="fe_img" src="@/assets/custom.jpg" alt="" />
             <div class="features-list-item-title">Customizability</div>
             <div class="features-list-item-text">
@@ -47,8 +62,16 @@
               </ul>
             </div>
           </div>
-          <div class="features-list-item">
-            <img class="fe_img" src="@/assets/easytouse.avif" alt="" />
+          <div class="line"></div>
+          <div
+            class="features-list-item jos"
+            data-jos_delay="0.4"
+            data-jos_duration="0.7"
+            data-jos_rootMargin_bottom="20%"
+            data-jos_scrollDirection="down"
+            data-jos_animation="flip"
+          >
+            <img class="fe_img" src="@/assets/easytouse.jpg" alt="" />
             <div class="features-list-item-title">Easy to use</div>
             <div class="features-list-item-text">
               <ul>
@@ -60,7 +83,15 @@
               </ul>
             </div>
           </div>
-          <div class="features-list-item">
+          <div class="line"></div>
+          <div
+            class="features-list-item jos"
+            data-jos_delay="0.5"
+            data-jos_duration="0.7"
+            data-jos_rootMargin_bottom="20%"
+            data-jos_scrollDirection="down"
+            data-jos_animation="flip"
+          >
             <!-- related picture -->
             <img class="fe_img" src="@/assets/opensource.png" alt="" />
             <div class="features-list-item-title">Open Source</div>
@@ -68,7 +99,7 @@
               class="features-list-item-text jos"
               data-jos_animation="no-transition"
               data-jos_invoke="heading"
-              data-nextScroll="footer"
+              data-nextScroll="demo"
               data-intro_title="Features"
             >
               <ul>
@@ -85,6 +116,11 @@
 </template>
 
 <style scoped>
+.line {
+  width: 0.1vw;
+  height: 17vw;
+  background-color: var(--grey2);
+}
 .features_frameowrk {
   display: flex;
   align-items: center;
@@ -171,7 +207,11 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  width: 90vw;
   flex-wrap: wrap;
+  align-content: center;
+  flex-direction: row;
+  /* overflow-x: scroll;*/
 }
 .features-list-item {
   width: 16vw;
@@ -209,15 +249,14 @@ section {
   }
 }
 .fe_img {
-  width: 15vw;
-  height: 15vw;
+  width: 13vw;
+  height: 13vw;
   margin-bottom: 2vw;
-  width: 15vw;
-  height: 15vw;
+  width: 13vw;
+  height: 13vw;
   margin-bottom: 2vw;
   /* mix-blend-mode: multiply; */
   filter: grayscale(1) invert(1);
-  mix-blend-mode: difference;
 }
 ul {
   display: flex;

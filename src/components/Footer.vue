@@ -22,8 +22,8 @@ const { FooterNote } = defineProps(["FooterNote"]);
             <a
               class="circ_lo jos"
               data-jos_invoke="heading"
-              data-intro_title="Footer"
-              data-nextScroll="footer"
+              data-intro_title="Links"
+              data-nextScroll="introduction"
               data-jos_animation="flip"
               data-jos_delay="0"
             >

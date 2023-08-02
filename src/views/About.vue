@@ -44,6 +44,7 @@ onMounted(() => {
     data-jos_rootMargin="-800px 0px 0px 0px"
     data-jos_animation="no-transition"
     data-jos_invoke="hide_fixed"
+    id="installation"
   >
     <div class="home_about">
       <!-- <div>* I Got shut by company for being over qualified *</div>
@@ -61,13 +62,13 @@ onMounted(() => {
             class="step1 jos"
             data-jos_animation="fade-right"
             data-jos_scrollDirection="down"
-            data-jos_rootMargin_bottom="35%"
+            data-jos_rootMargin_bottom="20%"
           >
             <div
               class="step1_title jos"
               data-jos_animation="no-transition"
               data-jos_invoke="heading"
-              data-nextScroll="footer"
+              data-nextScroll="links"
               data-intro_title="Installation"
             >
               1. Install JOS
@@ -218,7 +219,7 @@ onMounted(() => {
                 class="step1_demo_text jos"
                 data-jos_animation="no-transition"
                 data-jos_invoke="heading"
-                data-nextScroll="footer"
+                data-nextScroll="links"
                 data-intro_title="Installation"
               >
                 Set class="jos" to the element you want to animate :
@@ -476,7 +477,9 @@ onMounted(() => {
   background-color: var(--grey);
   color: var(--color-primary);
   cursor: pointer;
+  font-size: 1vw;
 }
+
 .copy_but:hover {
   background-color: var(--grey2);
 }

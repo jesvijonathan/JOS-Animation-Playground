@@ -55,7 +55,7 @@ onMounted(() => {
               class="intro_desc jos"
               data-jos_animation="no-transition"
               data-jos_invoke="heading"
-              data-nextScroll="footer"
+              data-nextScroll="installation"
               data-intro_title="Demo"
             >
               Scroll trigger work when element intersects a margin in the view
@@ -87,7 +87,7 @@ onMounted(() => {
               class="intro_desc jos"
               data-jos_animation="no-transition"
               data-jos_invoke="heading"
-              data-nextScroll="footer"
+              data-nextScroll="installation"
               data-intro_title="Demo"
             >
               This feature enables the capability for adding scroll based
@@ -118,16 +118,16 @@ onMounted(() => {
   gap: 2vw;
 }
 .button {
-  background: transparent;
-  color: var(--color-primary);
-  padding: 0.5vw 1vw;
-  border-radius: 0.5vw;
-  font-size: 1.2vw;
-  font-weight: 600;
-  letter-spacing: 0.1vw;
-  cursor: pointer;
   border: 0.1vw solid var(--color-primary);
-  transition: 0.2s;
+  border-radius: 7px;
+  background-color: transparent;
+  color: var(--color-primary);
+  font-size: 1.2vw;
+  font-weight: bold;
+  padding: 0.5vw 1vw;
+  cursor: pointer;
+  font-weight: 100;
+  transition: 0.3s;
 }
 .button:hover {
   background: var(--color-primary);
@@ -182,12 +182,13 @@ onMounted(() => {
   margin-bottom: 5vw;
 }
 .intro_desc {
-  font-size: 1.2vw;
+  font-size: 1.1vw;
   color: var(--color-text);
   margin: 0vw 0vw 2vw 0vw;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  letter-spacing: 0.1vw;
+  /* letter-spacing: 0.1vw; */
+  line-height: 175%;
 }
 .intro_tit {
 }

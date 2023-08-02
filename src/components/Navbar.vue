@@ -23,6 +23,7 @@ function toggleDarkMode(e) {
         data-jos_delay="0.8"
         data-jos_duration="0.5"
         data-jos_once="true"
+        data-hover_data="All the animation you need 🔥"
         >JOS</a
       >
       <div
@@ -61,6 +62,7 @@ function toggleDarkMode(e) {
         data-jos_animation="zoom-down"
         data-jos_delay="0.4"
         data-jos_once="true"
+        data-hover_data="Toggle Dark Mode"
         @click="toggleDarkMode()"
         ><i class="fa-solid fa-moon"></i
       ></a>
@@ -74,6 +76,7 @@ function toggleDarkMode(e) {
         data-jos_animation="zoom-down"
         data-jos_delay="0.5"
         data-jos_once="true"
+        data-hover_data="Github Repository"
         ><i class="fa-brands fa-github"></i
       ></a>
     </div>

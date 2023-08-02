@@ -26,7 +26,6 @@ import { ref } from "vue";
   color: black;
   transition: 0.1s ease;
   width: fit-content;
-  max-width: 20vw;
   height: 4vw;
   padding: 0 1vw;
   border-radius: 1vw;
