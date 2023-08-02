@@ -1,6 +1,10 @@
+<center>
+
 # jos-animation-playground
 
 Playground for tesing [JOS-animation's](https://github.com/jesvijonathan/JOS-Animation-Library) features ;)
+
+(Under Development : [Demo](https://jesvijonathan.github.io/jos-animation-playground/))
 
 <a
   target="\_blank"
@@ -9,16 +13,10 @@ Playground for tesing [JOS-animation's](https://github.com/jesvijonathan/JOS-Ani
 <img
     src="https://cdn.jsdelivr.net/gh/jesvijonathan/JOS-Animation-Library@master/res/badge/jos_github%20default.svg"
     alt="JOS-Animation"
-    style="max-width: 100%;"/>
-</a>
+    style="max-width: 100%;"/></a>
+<a href="https://badge.fury.io/js/jos-animation"><img src="https://badge.fury.io/js/jos-animation.svg" alt="npm version" height="18"></a>
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## </center>
 
 ## Project Setup
 
@@ -37,3 +35,5 @@ npm run dev
 ```sh
 npm run build
 ```
+
+---
