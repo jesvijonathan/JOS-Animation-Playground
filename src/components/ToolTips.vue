@@ -24,7 +24,7 @@ import { ref } from "vue";
 }
 .mouse-tooltip {
   color: black;
-  transition: 0.2s ease;
+  transition: 0.1s ease;
   width: fit-content;
   max-width: 20vw;
   height: 4vw;

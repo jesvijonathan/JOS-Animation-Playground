@@ -1,5 +1,7 @@
 <script setup>
 // on update JOS.refresh() during every Dom update
+import { ref } from "vue";
+import { onMounted, onUpdated } from "vue";
 
 // copy button
 const tooltext = document.getElementById("tooltip-text");
@@ -14,6 +16,26 @@ function copy(e) {
     tooltext.textContent = "Copy";
   }, 3000);
 }
+onMounted(() => {
+  const scrolltext = document.getElementById("scroller");
+
+  let oldScroll = 0;
+  function scrolling_text(e) {
+    const scroll = e.jos.scrollProgress;
+    // move and skew with some intertia after scroll
+    scrolltext.style.transform = "translateX(" + -scroll * 100 + "vw)";
+    // add intertia when stopped
+    // console.log(oldScroll.toFixed(2), scroll.toFixed(2));
+    // if (oldScroll.toFixed(1) == scroll.toFixed(1)) {
+    //   scrolltext.style.transition = "transform 0.1s ease-out";
+    // } else {
+    // }
+
+    oldScroll = e.jos.scrollProgress;
+  }
+
+  window["scrolling_text"] = scrolling_text;
+});
 </script>
 
 <template>
@@ -228,11 +250,133 @@ function copy(e) {
           </div>
         </div>
       </div>
+      <div id="scrolltext" class="scrolling_text jos">
+        <div
+          id="scroller"
+          class="scroller jos"
+          data-jos_scroll="scrolling_text"
+          data-hover_data="Click to move to Playground"
+        >
+          <div class="more_details_title">
+            <div class="more_text">Test it in Playground</div>
+            <i class="fa-solid fa-arrow-right-long aroh"></i>
+          </div>
+          <div class="more_details_title">
+            <div class="more_text">Test it in Playground</div>
+            <i class="fa-solid fa-arrow-right-long aroh"></i>
+          </div>
+          <div class="more_details_title">
+            <div class="more_text">Test it in Playground</div>
+            <i class="fa-solid fa-arrow-right-long aroh"></i>
+          </div>
+          <div class="more_details_title">
+            <div class="more_text">Test it in Playground</div>
+            <i class="fa-solid fa-arrow-right-long aroh"></i>
+          </div>
+          <div class="more_details_title">
+            <div class="more_text">Test it in Playground</div>
+            <i class="fa-solid fa-arrow-right-long aroh"></i>
+          </div>
+          <div class="more_details_title">
+            <div class="more_text">Test it in Playground</div>
+            <i class="fa-solid fa-arrow-right-long aroh"></i>
+          </div>
+          <div class="more_details_title">
+            <div class="more_text">Test it in Playground</div>
+            <i class="fa-solid fa-arrow-right-long aroh"></i>
+          </div>
+          <div class="more_details_title">
+            <div class="more_text">Test it in Playground</div>
+            <i class="fa-solid fa-arrow-right-long aroh"></i>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <style scoped>
+.more_details_title {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1vw;
+  font-size: 1vw;
+  font-weight: 100;
+  cursor: pointer;
+}
+.more_text {
+  font-size: 2vw;
+  width: 19vw;
+  font-weight: 500;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 0.2s ease;
+  flex-wrap: nowrap;
+  align-content: center;
+  padding: 0vw 1vw;
+  gap: 1vw;
+  transform: skew(-10deg);
+  background-color: var(--grey2);
+  background-color: var(--color-background);
+}
+.more_details {
+  width: 100%;
+  height: fit-content;
+  font-size: 1vw;
+  display: flex;
+  text-align: justify;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+.aroh {
+  padding: 0vw 1vw;
+  margin-right: 1vw;
+  font-size: 1.5vw;
+  transition: 0.3s ease;
+}
+
+.scroller:hover .aroh {
+  transform: translateX(-25vw);
+}
+.scroller:hover .more_text {
+  transform: translateX(25vw);
+}
+.scrolling_text:hover {
+  border: 0vw solid var(--color-primary);
+  border: none;
+}
+
+.scroller {
+  transition: 0.1s ease-out;
+  width: 150vw;
+  height: fit-content;
+  background-color: var(--black);
+  font-size: 1vw;
+  display: flex;
+  text-align: justify;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  border: 0.3vw solid transparent;
+}
+.scrolling_text {
+  border: none;
+  border: 0vw solid var(--color-primary);
+}
+
+#scroller {
+  transition: 0.2s ease-out;
+}
+
 /* scrollbar for code */
 .step1_demo_code::-webkit-scrollbar {
   width: 0vw;

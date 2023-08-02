@@ -15,7 +15,7 @@ import Projects from "@/views/projects.vue";
 import { ref } from "vue";
 
 // Loader
-const loader = ref(true);
+const loader = ref(false);
 onload = () => {
   setTimeout(() => {
     document.querySelector(".con").style.opacity = 0;
@@ -37,6 +37,16 @@ onload = () => {
 
   document.addEventListener("mouseover", (e) => {
     let mose_data = e.target.dataset.hover_data;
+    if (!mose_data) {
+      let parent = e.target.parentElement;
+      while (parent) {
+        if (parent.dataset.hover_data) {
+          mose_data = parent.dataset.hover_data;
+          break;
+        }
+        parent = parent.parentElement;
+      }
+    }
     if (mose_data) {
       e.target.dataset.hover_data;
       tooltips.style.display = "flex";
@@ -94,13 +104,11 @@ window["alertt"] = alertt;
   <ToolTips />
 
   <Home v-show="!loader" />
-
+  <Features />
+  <Intro v-show="!loader" />
   <About />
 
-  <Intro v-show="!loader" />
-
-  <Features />
-  <Projects />
+  <!-- <Projects /> -->
 
   <Footer v-show="!loader" />
 </template>
