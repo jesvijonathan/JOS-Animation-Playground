@@ -69,7 +69,7 @@ var $i=Object.defineProperty;var Fi=(t,e,s)=>e in t?$i(t,e,{enumerable:!0,config
     Use a desktop or laptop to view this website.
     
     <a style="margin-top:14vh" href="https://jesvijonathan.github.io/JOS-Animation-Library/"><u>Click to view JOS Demo (old)</u></a>
-  </div>`)},document.body.classList.add("dark");const s=oe(!0),n=oe("features"),o=oe("Home");function i(c){o.value=c.dataset.intro_title,n.value=c.dataset.nextscroll}window.heading=i;function r(){alert("Asd")}return window.alertt=r,(c,l)=>(Rt(),Ct($t,null,[$e(et(cl,null,null,512),[[Le,e.value]]),$e(et(xl,{isDark:s.value,navTitle:o.value},null,8,["isDark","navTitle"]),[[Le,!e.value]]),et(Ol,{moveToID:n.value},null,8,["moveToID"]),et($l),$e(et(xi,null,null,512),[[Le,!e.value]]),et(Gl),$e(et(dd,null,null,512),[[Le,!e.value]]),et(id),et(_d),$e(et(Bl,{FooterNote:"Shut Up & Use It Already !"},null,512),[[Le,!e.value]])],64))}};/*!
+  </div>`)},document.body.classList.add("dark");const s=oe(!0),n=oe("features"),o=oe("Home");function i(c){o.value=c.dataset.intro_title,n.value=c.dataset.nextscroll}window.heading=i;function r(){alert("Asd")}return window.alertt=r,(c,l)=>(Rt(),Ct($t,null,[$e(et(cl,null,null,512),[[Le,e.value]]),$e(et(xl,{isDark:s.value,navTitle:o.value},null,8,["isDark","navTitle"]),[[Le,!e.value]]),et(Ol,{moveToID:n.value},null,8,["moveToID"]),et($l),$e(et(xi,null,null,512),[[Le,!e.value]]),$e(et(Gl,null,null,512),[[Le,!e.value]]),$e(et(dd,null,null,512),[[Le,!e.value]]),et(id),et(_d),et(Bl,{FooterNote:"Shut Up & Use It Already !"})],64))}};/*!
   * vue-router v4.2.4
   * (c) 2023 Eduardo San Martin Morote
   * @license MIT
