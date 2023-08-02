@@ -4,7 +4,7 @@
 
 Playground for tesing [JOS-animation's](https://github.com/jesvijonathan/JOS-Animation-Library) features ;)
 
-(Under Development : [Demo](https://jesvijonathan.github.io/jos-animation-playground/))
+(Under Development : [View Here](https://jesvijonathan.github.io/jos-animation-playground/))
 
 <a
   target="\_blank"
