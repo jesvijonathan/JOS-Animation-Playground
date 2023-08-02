@@ -193,13 +193,15 @@ onMounted(() => {
 .intro_tit {
 }
 .intro_2 {
-  width: 50vw;
+  width: 47vw;
+  margin-right: 3vw;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-content: center;
   justify-content: center;
   align-items: flex-start;
+  /* margin: 10vw 0vw 10vw 10vw;
   /* margin: 10vw 0vw 10vw 10vw;*/
 }
 .marg {
