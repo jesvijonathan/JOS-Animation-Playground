@@ -20,27 +20,19 @@ onMounted(() => {
 <template>
   <section id="demo">
     <div class="intro_cont">
-      <div id="intro_1" class="intro_1">
-        <div
-          class="box jos"
-          data-jos_rootMargin_bottom="20%"
-          data-jos_rootMargin_top="20%"
-          data-jos_animation="grow"
-          data-jos_duration="1"
-        >
-          Triggered
-        </div>
-        <div class="gap"></div>
-        <div
-          class="box jos"
-          id="box2"
-          data-jos_animation="stretch"
-          data-jos_rootMargin="20% 0% 20% 0%"
-          data-jos_scroll="scroll_rel"
-        ></div>
-      </div>
       <div class="intreo">
         <div class="cont">
+          <div id="intro_1" class="intro_1">
+            <div
+              class="box jos"
+              data-jos_rootMargin_bottom="20%"
+              data-jos_rootMargin_top="20%"
+              data-jos_animation="grow"
+              data-jos_duration="1"
+            >
+              Triggered
+            </div>
+          </div>
           <div
             id="intro_2"
             class="intro_2 jos"
@@ -76,12 +68,27 @@ onMounted(() => {
           </div>
         </div>
         <div class="cont">
+          <div class="intro_1">
+            <div
+              class="box jos"
+              id="box2"
+              data-jos_animation="stretch"
+              data-jos_rootMargin="20% 0% 20% 0%"
+              data-jos_scroll="scroll_rel"
+            ></div>
+          </div>
           <div id="intro_2" class="intro_2">
             <div class="intro_title">Scroll Progress Animation</div>
             <div class="intro_desc">
               JOS, on top of scroll trigger animation supports Scroll Progress
               callbacks to handle animation and other function depending on the
               scroll percent of element in the view port
+            </div>
+            <div class="intro_desc">
+              This feature enables the capability for adding scroll based
+              animation that works with respect to scroll percent of element.
+              This can also be used to add futuristic features in a web app
+              using jos animation.
             </div>
             <div
               class="intro_desc jos"
@@ -90,12 +97,6 @@ onMounted(() => {
               data-nextScroll="installation"
               data-intro_title="Demo"
             >
-              This feature enables the capability for adding scroll based
-              animation that works with respect to scroll percent of element.
-              This can also be used to add futuristic features in a web app
-              using jos animation.
-            </div>
-            <div class="intro_desc jos" data-jos_scroll="scroll_rel">
               All features including both the scroll-callback and intersection
               animation features are all packaged into a single library and
               comes in a very light weight (2kb) package...
@@ -137,8 +138,7 @@ onMounted(() => {
   height: 20vw;
 }
 .box {
-  margin-top: 15vw;
-  width: 30vw;
+  width: 27vw;
   height: 20vw;
   display: flex;
   text-align: center;
@@ -155,7 +155,7 @@ onMounted(() => {
   margin-top: 0vw;
 }
 .intreo {
-  margin: 10vw 0vw 5vw 3vw;
+  margin: 10vw 0vw 0vw 0vw;
   display: flex;
   flex-direction: column;
   gap: 8vw;
@@ -164,6 +164,7 @@ onMounted(() => {
   justify-content: center;
   align-content: center;
   flex-wrap: nowrap;
+  width: 100%;
 }
 .show_fixed {
   position: fixed;
@@ -173,7 +174,7 @@ onMounted(() => {
   z-index: 1;
 }
 .intro_title {
-  font-size: 3vw;
+  font-size: 2.8vw;
   color: var(--color-text);
   margin: 0vw 0vw 2vw 0vw;
   font-family: "Poppins", sans-serif;
@@ -189,27 +190,39 @@ onMounted(() => {
   font-weight: 400;
   /* letter-spacing: 0.1vw; */
   line-height: 175%;
+  text-align: justify;
 }
 .intro_tit {
 }
 .intro_2 {
-  width: 47vw;
-  margin-right: 3vw;
+  width: 43vw;
+  height: 35vw;
+  margin-right: 5vw;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-content: center;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
-  /* margin: 10vw 0vw 10vw 10vw;
-  /* margin: 10vw 0vw 10vw 10vw;*/
 }
 .marg {
   margin: 10vw 0vw 10vw 35vw;
 }
+.cont {
+  display: flex;
+  gap: 7vw;
+  /* min-width: 93vw; */
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  align-content: center;
+  /* flex-wrap: wrap; */
+}
 .intro_1 {
-  width: 40vw;
-  height: 100%;
+  height: 38vw;
+  /* padding: 0vw 3vw; */
+  padding: 0vw 3vw;
+  position: relative;
   margin: 0;
   top: 0;
   left: 0;
@@ -222,16 +235,15 @@ onMounted(() => {
   z-index: -1;
   display: flex;
   transition: 0.1s ease;
-  position: absolute;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
   align-content: center;
-
-  background-image: url("@/assets/grid.jpg");
+  background-image: url(/JOS-Animation-Playground/src/assets/grid.jpg);
   background-position: center;
   background-repeat: repeat;
   background-blend-mode: multiply;
+  justify-content: center;
 }
 .intro_cont {
   /* height: 100%; */

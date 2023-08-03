@@ -58,20 +58,46 @@ import web8 from "@/assets/floating_websites/web8.png";
         data-jos_duration="0.6"
         data-jos_animation="zoom"
       >
-        <a href="" target="_blank" class="showcase_it piece_1"></a>
+        <a
+          href=""
+          target="_blank"
+          class="showcase_it piece_1"
+          data-hover_data="Projects made using JOS"
+        ></a>
 
-        <a href="" target="_blank" class="showcase_it piece_2"></a>
+        <a
+          href=""
+          target="_blank"
+          class="showcase_it piece_2"
+          data-hover_data="Projects made using JOS"
+        ></a>
 
-        <a href="" target="_blank" class="showcase_it piece_3"></a>
+        <a
+          href=""
+          target="_blank"
+          class="showcase_it piece_3"
+          data-hover_data="Projects made using JOS"
+        ></a>
 
-        <a href="" target="_blank" class="showcase_it piece_4"></a>
+        <a
+          href=""
+          target="_blank"
+          class="showcase_it piece_4"
+          data-hover_data="Projects made using JOS"
+        ></a>
 
-        <a href="" target="_blank" class="showcase_it piece_5"></a>
+        <a
+          href=""
+          target="_blank"
+          class="showcase_it piece_5"
+          data-hover_data="Projects made using JOS"
+        ></a>
 
         <a
           href=""
           target="_blank"
           class="showcase_it piece_1 piece_7"
+          data-hover_data="Projects made using JOS"
           style="animation-delay: 5s; bottom: -80%"
         ></a>
 
@@ -79,6 +105,7 @@ import web8 from "@/assets/floating_websites/web8.png";
           href=""
           target="_blank"
           class="showcase_it piece_2 piece_6"
+          data-hover_data="Projects made using JOS"
           style="animation-delay: 5s; bottom: -36%; left: 10%; width: 16vw"
         ></a>
       </div>
@@ -194,7 +221,7 @@ import web8 from "@/assets/floating_websites/web8.png";
   }
   100% {
     opacity: 0;
-    transform: translateY(-100vw);
+    transform: translateY(-100vh);
   }
 }
 .home_showcase {

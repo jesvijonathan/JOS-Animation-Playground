@@ -56,7 +56,7 @@ onMounted(() => {
       <div>
         <br />
         <!-- <div class="">This is a response, a work of art !</div> -->
-        <div class="started_t">Get started few steps</div>
+        <div class="started_t">Get started in few steps</div>
         <div class="steps">
           <div
             class="step1 jos"

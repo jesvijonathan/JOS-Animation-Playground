@@ -1,5 +1,27 @@
 <script setup>
 // on update JOS.refresh() during every Dom update
+import { onMounted, onUpdated } from "vue";
+
+onMounted(() => {
+  const scrolltext = document.getElementById("scroller2");
+
+  let oldScroll = 0;
+  function scrolling_text2(e) {
+    const scroll = e.jos.scrollProgress;
+    // move and skew with some intertia after scroll
+    scrolltext.style.transform = "translateX(" + -scroll * 100 + "vw)";
+    // add intertia when stopped
+    // console.log(oldScroll.toFixed(2), scroll.toFixed(2));
+    // if (oldScroll.toFixed(1) == scroll.toFixed(1)) {
+    //   scrolltext.style.transition = "transform 0.1s ease-out";
+    // } else {
+    // }
+
+    oldScroll = e.jos.scrollProgress;
+  }
+
+  window["scrolling_text2"] = scrolling_text2;
+});
 </script>
 
 <template>
@@ -112,10 +134,168 @@
         </div>
       </div>
     </div>
+    <div id="scrolltext" class="scrolling_text jos">
+      <div
+        id="scroller2"
+        class="scroller jos"
+        data-jos_scroll="scrolling_text2"
+        data-hover_data="Click to move to Playground"
+      >
+        <div class="more_details_title">
+          <div class="more_text">Test Demonstration</div>
+          <i class="fa-solid fa-arrow-right-long aroh"></i>
+        </div>
+        <div class="more_details_title">
+          <div class="more_text">Test Demonstration</div>
+          <i class="fa-solid fa-arrow-right-long aroh"></i>
+        </div>
+        <div class="more_details_title">
+          <div class="more_text">Test Demonstration</div>
+          <i class="fa-solid fa-arrow-right-long aroh"></i>
+        </div>
+        <div class="more_details_title">
+          <div class="more_text">Test Demonstration</div>
+          <i class="fa-solid fa-arrow-right-long aroh"></i>
+        </div>
+        <div class="more_details_title">
+          <div class="more_text">Test Demonstration</div>
+          <i class="fa-solid fa-arrow-right-long aroh"></i>
+        </div>
+        <div class="more_details_title">
+          <div class="more_text">Test it in Playground</div>
+          <i class="fa-solid fa-arrow-right-long aroh"></i>
+        </div>
+        <div class="more_details_title">
+          <div class="more_text">Test it in Playground</div>
+          <i class="fa-solid fa-arrow-right-long aroh"></i>
+        </div>
+        <div class="more_details_title">
+          <div class="more_text">Test it in Playground</div>
+          <i class="fa-solid fa-arrow-right-long aroh"></i>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
 <style scoped>
+.line {
+  width: 60%;
+  height: 0.1vw;
+  background: var(--color-secondary);
+  opacity: 0.4;
+}
+.butvon {
+  display: flex;
+  gap: 2vw;
+}
+.Button_1 {
+  border: 0.1vw solid var(--color-primary);
+  border-radius: 7px;
+  background-color: transparent;
+  color: var(--color-primary);
+  font-size: 1.2vw;
+  font-weight: bold;
+  padding: 0.5vw 1vw;
+  cursor: pointer;
+  font-weight: 100;
+  transition: 0.3s;
+}
+.Button_1:hover {
+  color: var(--color-background);
+  background-color: var(--color-primary);
+}
+.started_t {
+  font-family: "Poppins", sans-serif;
+  font-size: 3vw;
+  letter-spacing: normal;
+}
+.more_details_title {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1vw;
+  font-size: 1vw;
+  font-weight: 100;
+  cursor: pointer;
+}
+.more_text {
+  font-size: 2vw;
+  width: 19vw;
+  font-weight: 500;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 0.3s ease;
+  flex-wrap: nowrap;
+  align-content: center;
+  padding: 0vw 1vw;
+  gap: 1vw;
+  transform: skew(-10deg);
+  background-color: var(--grey2);
+  background-color: transparent;
+  color: var(--color-background);
+}
+.more_details {
+  width: 100%;
+  height: fit-content;
+  font-size: 1vw;
+  display: flex;
+  text-align: justify;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+.aroh {
+  padding: 0vw 1vw;
+  margin-right: 1vw;
+  font-size: 1.5vw;
+  transition: 0.3s ease;
+  background-color: transparent;
+  color: var(--color-background);
+}
+
+.scroller:hover .aroh {
+  transform: translateX(25vw);
+}
+.scroller:hover .more_text {
+  transform: translateX(25vw);
+}
+
+.scroller {
+  width: 150vw;
+  height: fit-content;
+  background-color: var(--black);
+  font-size: 1vw;
+  display: flex;
+  text-align: justify;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  border: 0.3vw solid transparent;
+  padding: 1.4vw 0vw;
+  cursor: pointer;
+}
+.scrolling_text {
+  border: none;
+  border: 0vw solid var(--color-primary);
+  background-color: var(--color-primary);
+  transition: 0s ease-out;
+  margin: 0vw 0vw;
+}
+
+#scroller2 {
+  background-color: transparent;
+  transition: 0s ease-out;
+  margin: 6vw 0vw 3vw 0vw;
+}
+
 .line {
   width: 0.1vw;
   height: 17vw;
@@ -179,7 +359,7 @@ section {
 }
 
 .features {
-  margin: 7vw 0vw;
+  margin: 10vw 0vw 4vw 0vw;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -190,6 +370,7 @@ section {
   width: 80%;
   height: 80%;
   display: flex;
+  gap: 2vw;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -220,6 +401,7 @@ section {
   justify-content: center;
   flex-direction: column;
   margin: 2vw;
+  transform: scale(0.9);
 }
 .features-list-item-title {
   font-size: 1.8vw;

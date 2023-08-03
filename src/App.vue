@@ -16,7 +16,7 @@ import Projects from "@/views/projects.vue";
 import { ref } from "vue";
 
 // Loader
-const loader = ref(true);
+const loader = ref(false);
 onload = () => {
   setTimeout(() => {
     document.querySelector(".con").style.opacity = 0;

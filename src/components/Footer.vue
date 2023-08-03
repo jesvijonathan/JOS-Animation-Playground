@@ -308,6 +308,7 @@ const { FooterNote } = defineProps(["FooterNote"]);
 .footer {
   width: 100vw;
   height: 64vh;
+  height: 33vw;
   background-color: var(--color-background);
   position: relative;
   overflow: hidden;
