@@ -42,7 +42,7 @@ onMounted(() => {
             class="features-list-item jos"
             data-jos_delay="0"
             data-jos_duration="0.5"
-            data-jos_rootMargin_bottom="20%"
+            data-jos_rootMargin_bottom="40%"
             data-jos_scrollDirection="down"
             data-jos_animation="fade-down"
           >
@@ -70,7 +70,7 @@ onMounted(() => {
             class="features-list-item jos"
             data-jos_delay="0.1"
             data-jos_duration="0.5"
-            data-jos_rootMargin_bottom="20%"
+            data-jos_rootMargin_bottom="40%"
             data-jos_scrollDirection="down"
             data-jos_animation="fade-down"
           >
@@ -89,7 +89,7 @@ onMounted(() => {
             class="features-list-item jos"
             data-jos_delay="0.2"
             data-jos_duration="0.5"
-            data-jos_rootMargin_bottom="20%"
+            data-jos_rootMargin_bottom="40%"
             data-jos_scrollDirection="down"
             data-jos_animation="fade-down"
           >
@@ -110,7 +110,7 @@ onMounted(() => {
             class="features-list-item jos"
             data-jos_delay="0.3"
             data-jos_duration="0.5"
-            data-jos_rootMargin_bottom="20%"
+            data-jos_rootMargin_bottom="40%"
             data-jos_scrollDirection="down"
             data-jos_animation="fade-down"
           >
