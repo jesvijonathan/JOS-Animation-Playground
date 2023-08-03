@@ -184,6 +184,7 @@ onMounted(() => {
   height: 0.1vw;
   background: var(--color-secondary);
   opacity: 0.4;
+  opacity: 0;
 }
 .butvon {
   display: flex;
@@ -395,13 +396,15 @@ section {
   /* overflow-x: scroll;*/
 }
 .features-list-item {
-  width: 16vw;
+  width: 18vw;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   margin: 2vw 0vw;
   transition: 0.4s ease;
+  border-radius: 1vw;
+  border: 0.1vw solid var(--grey);
 }
 .features-list-item * {
   transform: scale(0.9);
@@ -420,6 +423,9 @@ section {
   min-height: 10vw;
   color: var(--color-text);
   text-align: center;
+  /* background: var(--grey2);
+  border-radius: 1vw;
+  padding-top: 1vw; */
 }
 @media screen and (max-width: 768px) {
   .features-list-item {
@@ -434,11 +440,11 @@ section {
   }
 }
 .fe_img {
-  width: 13vw;
-  height: 13vw;
   margin-bottom: 2vw;
   width: 13vw;
   height: 13vw;
+  width: 12.5vw;
+  height: 12.5vw;
   margin-bottom: 2vw;
   /* mix-blend-mode: multiply; */
   filter: grayscale(1) invert(1);

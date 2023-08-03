@@ -1,5 +1,5 @@
 <script setup>
-defineProps(["isDark", "navTitle"]);
+defineProps(["isDark", "navTitle", "curButton"]);
 
 function toggleDarkMode(e) {
   this.isDark = !this.isDark;
@@ -12,6 +12,9 @@ function toggleDarkMode(e) {
     document.body.classList.add("light");
   }
 }
+
+import { useRouter } from "vue-router";
+const router = useRouter();
 </script>
 <template>
   <div class="navbar">
@@ -37,16 +40,16 @@ function toggleDarkMode(e) {
       </div>
     </div>
 
+    <!-- use variable curButton -->
     <div class="navbar_right">
       <a
-        href=""
-        target="_blank"
+        @click="router.push(curButton)"
         class="navbutton jos"
         data-jos_animation="zoom-down"
         data-jos_delay="0.2"
         data-jos_once="true"
         data-hover_data="A playground to test out the animations"
-        >Playground</a
+        >{{ curButton }}</a
       >
       <a
         href=""

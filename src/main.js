@@ -15,6 +15,7 @@ import "./assets/main.css";
 // import "jos/dist/jos.css";
 
 const app = createApp(App);
+app.use(router);
 
 app.mount("#app");
 

@@ -5,6 +5,7 @@ import Hud from "@/components/hud.vue";
 import ToolTips from "@/components/toolTips.vue";
 import Footer from "@/components/footer.vue";
 // import Noise from "@/components/noise.vue";
+import BlackScreen from "@/components/blackscreen.vue";
 
 import Home from "@/views/home.vue";
 import Brochure from "@/views/brochure.vue";
@@ -13,10 +14,14 @@ import Intro from "@/views/intro.vue";
 import Features from "@/views/features.vue";
 import Projects from "@/views/projects.vue";
 
+import Root from "@/views/root.vue";
+import Playground from "@/views/playground.vue";
+
 import { ref } from "vue";
 
 // Loader
 const loader = ref(true);
+
 onload = () => {
   setTimeout(() => {
     document.querySelector(".con").style.opacity = 0;
@@ -79,28 +84,6 @@ onload = () => {
 
   // if mobile block website
   if (window.innerWidth < 600) {
-    //   document.innerHTML = `  <div
-    //   style='
-    //     height: 100%;
-    //     width: 100%;
-    //     font-size: 3vw;
-    //     font-family: 'Poppins', sans-serif;
-    //     font-weight: 600;
-    //     left: 50%;
-    //     top: 50%;
-    //     transform: translate(-50%, -50%);
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-
-    //     color: var(--color-text);
-    //     z-index: 10;
-    //     position: fixed;
-    //     background: var(--color-background);
-    //   '
-    // >
-    //   Sorry, this website is not available on mobile devices.
-    // </div>`;
     document.body.innerHTML = `<div style='
     height: 100%;
         width: 100%;
@@ -124,7 +107,7 @@ onload = () => {
     Sorry, this website is not available on mobile devices.
     <br/><br/>
     Use a desktop or laptop to view this website.
-    
+
     <a style="margin-top:14vh" href="https://jesvijonathan.github.io/JOS-Animation-Library/"><u>Click to view JOS Demo (old)</u></a>
   </div>`;
   }
@@ -148,22 +131,35 @@ function alertt() {
   alert("Asd");
 }
 window["alertt"] = alertt;
+
+// current nav button
+const curButton = ref("Playground");
+function changeCurButton(e) {
+  curButton.value = e;
+}
+window["changeCurButton"] = changeCurButton;
 </script>
 
 <template>
+  <!-- render based on router -->
   <Loader v-show="loader" />
-  <Navbar v-show="!loader" :isDark="isDark" :navTitle="navTitle" />
+  <BlackScreen v-show="loader" />
+  <Navbar
+    v-show="!loader"
+    :isDark="isDark"
+    :navTitle="navTitle"
+    :curButton="curButton"
+  />
   <Hud :moveToID="moveToID" />
   <ToolTips />
 
-  <Home v-show="!loader" />
-  <Brochure v-show="!loader" />
-  <Intro v-show="!loader" />
-  <About />
+  <router-view
+    :loader="loader"
+    :isDark="isDark"
+    :navTitle="navTitle"
+    :moveToID="moveToID"
+  />
 
-  <!-- <Projects /> -->
-
-  <Features />
   <Footer FooterNote="Shut Up & Use It Already !" />
 </template>
 

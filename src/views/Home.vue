@@ -23,7 +23,7 @@ import web8 from "@/assets/floating_websites/web8.png";
       >
         <div style="display: flex" class="jos" data-jos_animation="fade-right">
           <div class="jos" data-jos_animation="flip-down">So</div>
-          <div class="jos" data-jos_animation="flip-down" data-jos_delay="0.5">
+          <div class="jos" data-jos_animation="flip-down" data-jos_delay="0">
             , I built an animation
           </div>
         </div>
@@ -31,13 +31,13 @@ import web8 from "@/assets/floating_websites/web8.png";
           style="display: flex; flex-direction: column"
           class="jos"
           data-jos_animation="fade-right"
-          data-jos_delay="0.7"
+          data-jos_delay="0.2"
         >
-          <div class="jos" data-jos_animation="flip-down" data-jos_delay="0.7">
+          <div class="jos" data-jos_animation="flip-down" data-jos_delay="0.2">
             library that can instantly
           </div>
 
-          <div class="jos" data-jos_animation="flip-down" data-jos_delay="1">
+          <div class="jos" data-jos_animation="flip-down" data-jos_delay="0.5">
             add life to your websites.
           </div>
         </div>
@@ -45,7 +45,7 @@ import web8 from "@/assets/floating_websites/web8.png";
         <div
           class="home_but jos"
           data-jos_animation="fade-right"
-          data-jos_delay="1"
+          data-jos_delay="0.5"
         >
           <button class="Button_1">Get Started</button>
           <button class="Button_1">Documentation</button>

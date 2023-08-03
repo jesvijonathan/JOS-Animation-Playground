@@ -239,7 +239,7 @@ onMounted(() => {
   flex-wrap: nowrap;
   align-items: center;
   align-content: center;
-  background-image: url(/JOS-Animation-Playground/src/assets/grid.jpg);
+  background-image: url("@/assets/grid.jpg");
   background-position: center;
   background-repeat: repeat;
   background-blend-mode: multiply;
