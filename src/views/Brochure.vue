@@ -41,10 +41,10 @@ onMounted(() => {
           <div
             class="features-list-item jos"
             data-jos_delay="0"
-            data-jos_duration="0.7"
+            data-jos_duration="0.5"
             data-jos_rootMargin_bottom="20%"
             data-jos_scrollDirection="down"
-            data-jos_animation="flip"
+            data-jos_animation="fade-down"
           >
             <!-- box image -->
 
@@ -68,11 +68,11 @@ onMounted(() => {
           <div class="line"></div>
           <div
             class="features-list-item jos"
-            data-jos_delay="0.2"
-            data-jos_duration="0.7"
+            data-jos_delay="0.1"
+            data-jos_duration="0.5"
             data-jos_rootMargin_bottom="20%"
             data-jos_scrollDirection="down"
-            data-jos_animation="flip"
+            data-jos_animation="fade-down"
           >
             <img class="fe_img" src="@/assets/custom.jpg" alt="" />
             <div class="features-list-item-title">Customizability</div>
@@ -87,11 +87,11 @@ onMounted(() => {
           <div class="line"></div>
           <div
             class="features-list-item jos"
-            data-jos_delay="0.4"
-            data-jos_duration="0.7"
+            data-jos_delay="0.2"
+            data-jos_duration="0.5"
             data-jos_rootMargin_bottom="20%"
             data-jos_scrollDirection="down"
-            data-jos_animation="flip"
+            data-jos_animation="fade-down"
           >
             <img class="fe_img" src="@/assets/easytouse.jpg" alt="" />
             <div class="features-list-item-title">Easy to use</div>
@@ -108,11 +108,11 @@ onMounted(() => {
           <div class="line"></div>
           <div
             class="features-list-item jos"
-            data-jos_delay="0.5"
-            data-jos_duration="0.7"
+            data-jos_delay="0.3"
+            data-jos_duration="0.5"
             data-jos_rootMargin_bottom="20%"
             data-jos_scrollDirection="down"
-            data-jos_animation="flip"
+            data-jos_animation="fade-down"
           >
             <!-- related picture -->
             <img class="fe_img" src="@/assets/opensource.png" alt="" />
@@ -400,7 +400,10 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 2vw;
+  margin: 2vw 0vw;
+  transition: 0.4s ease;
+}
+.features-list-item * {
   transform: scale(0.9);
 }
 .features-list-item-title {
