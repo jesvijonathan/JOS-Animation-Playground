@@ -221,7 +221,7 @@ import web8 from "@/assets/floating_websites/web8.png";
   }
   100% {
     opacity: 0;
-    transform: translateY(-100vh);
+    transform: translateY(-125vh);
   }
 }
 .home_showcase {

@@ -4,7 +4,6 @@ import { defineProps } from "vue";
 let { moveToID } = defineProps(["moveToID"]);
 
 function scrollToNext(e) {
-  console.log(e.dataset);
   const next = document.querySelector("#" + e.dataset.hover_data);
   next.scrollIntoView({ behavior: "smooth" });
 }

@@ -9,6 +9,9 @@ import { ref } from "vue";
 </template>
 
 <style scoped>
+.mouse-tooltip {
+  display: none;
+}
 .tolltip-arrow {
   width: 4vw;
   height: 4vw;

@@ -217,6 +217,7 @@ const { FooterNote } = defineProps(["FooterNote"]);
   margin-bottom: 2vw;
   border-radius: 50% 50% 0% 0%;
   border-bottom: 0.1vw solid var(--opa-black);
+  height: 15vw;
 }
 .footer_content_3 {
   height: 21vw;
