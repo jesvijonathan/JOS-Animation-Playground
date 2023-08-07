@@ -16,11 +16,12 @@ import Projects from "@/views/projects.vue";
 
 import Root from "@/views/root.vue";
 import Playground from "@/views/playground.vue";
+import PathNotFound from "@/views/pathnotfound.vue";
 
 import { ref } from "vue";
 
 // Loader
-const loader = ref(true);
+const loader = ref(false);
 
 onload = () => {
   setTimeout(() => {
@@ -138,10 +139,13 @@ function changeCurButton(e) {
   curButton.value = e;
 }
 window["changeCurButton"] = changeCurButton;
+
+const msg = ref("Error 404");
 </script>
 
 <template>
-  <!-- render based on router -->
+  <BlackScreen style="z-index: 99999" v-if="$route.path == '/404'" :msg="msg" />
+
   <Loader v-show="loader" />
   <BlackScreen v-show="loader" />
   <Navbar
@@ -160,7 +164,7 @@ window["changeCurButton"] = changeCurButton;
     :moveToID="moveToID"
   />
 
-  <Footer FooterNote="Shut Up & Use It Already !" />
+  <Footer FooterNote="It's a response, A work of Art  " />
 </template>
 
 <style scoped></style>
