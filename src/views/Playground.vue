@@ -1,6 +1,6 @@
 <script setup>
 import TestArea from "@/views/TestArea.vue";
-import { defineProps } from "vue";
+import { computed, defineProps } from "vue";
 import { onMounted } from "vue";
 import { ref } from "vue";
 
@@ -8,12 +8,78 @@ import JOS from "jos-animation";
 
 const { loader } = defineProps(["loader"]);
 changeCurButton("Home");
-/*
- 
-*/
+
+// nig = {
+//   disable: false,
+//   debugMode: true,
+//   passive: true,
+//-   once: false,
+//-   animation: "grow",
+//-   animationInverse: "fade",
+//-   timingFunction: "ease-in-out",
+//-   mirror: true,
+//-   threshold: 0,
+//-   delay: 0,
+//-   duration: 0.5,
+//-   startVisible: "false",
+//-   scrollDirection: "none",
+//-   scrollProgressDisable: false,
+//-   intersectionRatio: 0,
+//-   rootMargin_top: "0%",
+//-   rootMargin_bottom: "-50%",
+//-   rootMargin: "0% 0% -50% 0%",
+// };
+
+// get animation from name "animation"
+
+// let rootMargin_top = ref(10);
+// let rootMargin_right = ref(0);
+// let rootMargin_bottom = ref(0);
+// let rootMargin_left = ref(40);
+const version = ref("0.8.8");
+
+const init = ref(0);
+const stop = ref(-1);
+const start = ref(-1);
+const destroy = ref(1);
+
+function but_stop() {
+  JOS.stop(stop.value);
+}
+function but_start() {
+  JOS.start(start.value);
+}
+function but_destroy() {
+  JOS.destroy(destroy.value);
+}
 
 let option = ref({
   animation: "fade",
+  delay: 0,
+  duration: 0.5,
+  timingFunction: "ease",
+  once: false,
+  mirror: true,
+  scrollDirection: "none",
+  startVisible: false,
+  scrollProgressDisable: false,
+  animationInverse: "", //
+  threshold: 0, //
+  intersectionRatio: "", //
+
+  rootMargin_top: 10,
+  rootMargin_right: 0, //
+  rootMargin_bottom: 40,
+  rootMargin_left: 0, //
+  rootMargin: "10% 0% 40% 0%", //
+
+  invoke: "none",
+  invokeOut: "none",
+  scroll: "none",
+
+  disable: false,
+  debugMode: true,
+  passive: false,
 });
 
 onMounted(() => {
@@ -22,6 +88,28 @@ onMounted(() => {
   console.log(JOS);
   const scrollContainer = document.getElementById("scroll-container");
 });
+
+const playgroundSettings = ref({
+  cubeColor: "#ffffff",
+  cubeSize: 100,
+  backgroundColor: false,
+  totalCubes: 7,
+  rootmarginVisible: false,
+  newCubeOption: true,
+});
+
+const refe = ref(true);
+function but_init() {
+  refe.value = false;
+  setTimeout(() => {
+    refe.value = true;
+    setTimeout(() => {
+      JOS.init(option.value);
+    }, 100);
+  }, 100);
+
+  console.log(option.value);
+}
 
 let plg_opt = ref("animation");
 </script>
@@ -88,7 +176,7 @@ let plg_opt = ref("animation");
         <div class="opt_inside">
           <label for="animation">Animation : </label>
           <!-- select -->
-          <select name="animation" id="animation">
+          <select name="animation" id="animation" v-model="option.animation">
             <option value="static">static</option>
             <option value="no-transition">no-transition</option>
 
@@ -202,8 +290,8 @@ let plg_opt = ref("animation");
         <div class="opt_inside">
           <label for="delay">Delay : </label>
           <!-- select -->
-          <select name="delay" id="delay">
-            <option value="0">0</option>
+          <select name="delay" id="delay" v-model="option.delay">
+            <option value="0" selected>0</option>
             <option value="0.1">0.1</option>
             <option value="0.2">0.2</option>
             <option value="0.3">0.3</option>
@@ -226,7 +314,7 @@ let plg_opt = ref("animation");
         <div class="opt_inside">
           <label for="duration">Duration : </label>
           <!-- select -->
-          <select name="duration" id="duration">
+          <select name="duration" id="duration" v-model="option.duration">
             <option value="0">0</option>
             <option value="0.1">0.1</option>
             <option value="0.2">0.2</option>
@@ -250,7 +338,11 @@ let plg_opt = ref("animation");
         <div class="opt_inside">
           <label for="timingFunction">Timing Function : </label>
           <!-- select -->
-          <select name="timingFunction" id="timingFunction">
+          <select
+            name="timingFunction"
+            id="timingFunction"
+            v-model="option.timingFunction"
+          >
             <option value="unset">none</option>
             <option value="ease" selected>ease</option>
             <option value="ease-in">ease-in</option>
@@ -270,9 +362,9 @@ let plg_opt = ref("animation");
         <div class="opt_inside">
           <label for="once">Once : </label>
           <!-- select -->
-          <select name="once" id="once">
-            <option value="true">True</option>
+          <select name="once" id="once" v-model="option.once">
             <option value="false" selected>False</option>
+            <option value="true">True</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
@@ -291,8 +383,8 @@ let plg_opt = ref("animation");
         <div class="opt_inside">
           <label for="mirror">Mirror : </label>
           <!-- select -->
-          <select name="mirror" id="mirror">
-            <option value="true">True</option>
+          <select name="mirror" id="mirror" v-model="option.mirror">
+            <option value="true" selected>True</option>
             <option value="false">False</option>
           </select>
         </div>
@@ -302,8 +394,12 @@ let plg_opt = ref("animation");
         <div class="opt_inside">
           <label for="scrollDirection">Scroll Direction : </label>
           <!-- select -->
-          <select name="scrollDirection" id="scrollDirection">
-            <option value="none">none (Both)</option>
+          <select
+            name="scrollDirection"
+            id="scrollDirection"
+            v-model="option.scrollDirection"
+          >
+            <option value="none">none (All)</option>
             <option value="up">up</option>
             <option value="down">down</option>
           </select>
@@ -314,9 +410,13 @@ let plg_opt = ref("animation");
         <div class="opt_inside">
           <label for="startVisible">Start Visible : </label>
           <!-- select -->
-          <select name="startVisible" id="startVisible">
-            <option value="false">False</option>
+          <select
+            name="startVisible"
+            id="startVisible"
+            v-model="option.startVisible"
+          >
             <option value="true">True</option>
+            <option value="false" selected>False</option>
           </select>
         </div>
       </div>
@@ -326,9 +426,13 @@ let plg_opt = ref("animation");
         <div class="opt_inside">
           <label for="scrollProgressDisable">Scroll Progress Disable : </label>
           <!-- select -->
-          <select name="scrollProgressDisable" id="scrollProgressDisable">
-            <option value="false">False</option>
+          <select
+            name="scrollProgressDisable"
+            id="scrollProgressDisable"
+            v-model="option.scrollProgressDisable"
+          >
             <option value="true">True</option>
+            <option value="false" selected>False</option>
           </select>
         </div>
       </div>
@@ -338,12 +442,16 @@ let plg_opt = ref("animation");
         <div class="opt_inside">
           <label for="animationInverse">Animation Inverse : </label>
           <!-- select -->
-          <select name="animationInverse" id="animationInverse">
+          <select
+            name="animationInverse"
+            id="animationInverse"
+            v-model="option.animationInverse"
+          >
+            <option value="" selected>none</option>
             <option value="static">static</option>
             <option value="no-transition">no-transition</option>
-
             <option value="" disabled></option>
-            <option value="fade" selected>fade</option>
+            <option value="fade">fade</option>
             <option value="fade-up">fade-up</option>
             <option value="fade-down">fade-down</option>
             <option value="fade-left">fade-left</option>
@@ -450,42 +558,42 @@ let plg_opt = ref("animation");
 
       <!-- threshold -->
       <div class="opt">
-        <div class="opt_inside">
+        <div class="opt_inside dis">
           <label for="threshold">Threshold : </label>
           <!-- select -->
-          <select name="threshold" id="threshold">
-            <option value="0">0</option>
-            <option value="0.1">0.1</option>
-            <option value="0.2">0.2</option>
-            <option value="0.3">0.3</option>
-            <option value="0.4">0.4</option>
-            <option value="0.5">0.5</option>
-            <option value="0.6">0.6</option>
-            <option value="0.7">0.7</option>
-            <option value="0.8">0.8</option>
-            <option value="0.9">0.9</option>
-            <option value="1">1</option>
-          </select>
+          <input
+            type="number"
+            min="0"
+            max="1"
+            step="0.1"
+            v-model="option.threshold"
+            disabled
+          />
         </div>
       </div>
 
       <!-- intersection ratio -->
       <div class="opt">
-        <div class="opt_inside">
+        <div class="opt_inside dis">
           <label for="intersectionRatio">Intersection Ratio : </label>
           <!-- select -->
-          <select name="intersectionRatio" id="intersectionRatio">
-            <option value="0">0</option>
-            <option value="0.1">0.1</option>
-            <option value="0.2">0.2</option>
-            <option value="0.3">0.3</option>
-            <option value="0.4">0.4</option>
-            <option value="0.5">0.5</option>
-            <option value="0.6">0.6</option>
-            <option value="0.7">0.7</option>
-            <option value="0.8">0.8</option>
-            <option value="0.9">0.9</option>
-            <option value="1">1</option>
+          <select
+            name="intersectionRatio"
+            id="intersectionRatio"
+            v-model="option.intersectionRatio"
+          >
+            <option value="" disabled selected>auto</option>
+            <option value="0" disabled>0</option>
+            <option value="0.1" disabled>0.1</option>
+            <option value="0.2" disabled>0.2</option>
+            <option value="0.3" disabled>0.3</option>
+            <option value="0.4" disabled>0.4</option>
+            <option value="0.5" disabled>0.5</option>
+            <option value="0.6" disabled>0.6</option>
+            <option value="0.7" disabled>0.7</option>
+            <option value="0.8" disabled>0.8</option>
+            <option value="0.9" disabled>0.9</option>
+            <option value="1" disabled>1</option>
           </select>
         </div>
       </div>
@@ -503,8 +611,8 @@ let plg_opt = ref("animation");
               name="rootMargin_top"
               min="0"
               max="100"
-              value="10"
               step="10"
+              v-model="option.rootMargin_top"
             />
             <input
               type="number"
@@ -514,7 +622,7 @@ let plg_opt = ref("animation");
               min="0"
               max="100"
               step="10"
-              value="0"
+              v-model="option.rootMargin_bottom"
             />
 
             <input
@@ -524,8 +632,8 @@ let plg_opt = ref("animation");
               name="rootMargin_left"
               min="0"
               max="100"
-              value="40"
               step="10"
+              v-model="option.rootMargin_left"
             />
             <input
               type="number"
@@ -535,7 +643,7 @@ let plg_opt = ref("animation");
               min="0"
               max="100"
               step="10"
-              value="0"
+              v-model="option.rootMargin_right"
             />
           </div>
         </div>
@@ -555,53 +663,53 @@ let plg_opt = ref("animation");
       <div class="item_title">Callback Properties</div>
       <!-- invoke -->
       <div class="opt">
-        <div class="opt_inside">
+        <div class="opt_inside dis">
           <label for="invoke">Invoke : </label>
           <!-- select -->
-          <select name="invoke" id="invoke">
-            <option value="none">none</option>
-            <option value="alert">Test Function (Alert)</option>
-            <option value="console">Test Function (Console)</option>
+          <select name="invoke" id="invoke" v-model="option.invoke">
+            <option value="none" selected disabled>none</option>
+            <option value="alert" disabled>Test Callback (Alert)</option>
+            <option value="console" disabled>Test Callback (Console)</option>
           </select>
         </div>
       </div>
 
       <!-- invoke -->
       <div class="opt">
-        <div class="opt_inside">
+        <div class="opt_inside dis">
           <label for="invokeOut">Invoke Out : </label>
           <!-- select -->
-          <select name="invokeOut" id="invokeOut">
-            <option value="none">none</option>
-            <option value="alert">Test Function (Alert)</option>
-            <option value="console">Test Function (Console)</option>
+          <select name="invokeOut" id="invokeOut" v-model="option.invokeOut">
+            <option value="none" selected disabled>none</option>
+            <option value="alert" disabled>Test Callback (Alert)</option>
+            <option value="console" disabled>Test Callback (Console)</option>
           </select>
         </div>
       </div>
 
       <!-- anchor -->
       <div class="opt">
-        <div class="opt_inside">
+        <div class="opt_inside dis">
           <label for="anchor">Anchor : </label>
           <!-- select -->
           <select name="anchor" id="anchor">
-            <option value="none">none</option>
-            <option value="#elementID">#elementID</option>
+            <option value="none" disabled selected>none</option>
+            <option value="#elementID" disabled>#TestElementID</option>
           </select>
         </div>
       </div>
 
       <!-- scroll -->
       <div class="opt">
-        <div class="opt_inside">
+        <div class="opt_inside dis">
           <label for="scroll">Scroll Progress : </label>
           <!-- select -->
-          <select name="scroll" id="scroll">
-            <option value="none">none</option>
-            <option value="width">Scroll Progress Percent</option>
-            <option value="width">Test Callback (Opacity)</option>
-            <option value="width">Test Callback (Width)</option>
-            <option value="width">Test Callback (Rotate)</option>
+          <select name="scroll" id="scroll" v-model="option.scroll">
+            <option value="none" selected disabled>none</option>
+            <option value="width" disabled>Test Callback (% Text)</option>
+            <option value="width" disabled>Test Callback (Opacity)</option>
+            <option value="width" disabled>Test Callback (Width)</option>
+            <option value="width" disabled>Test Callback (Rotate)</option>
           </select>
         </div>
       </div>
@@ -610,53 +718,54 @@ let plg_opt = ref("animation");
     <div v-if="plg_opt == 'init'" class="cur_opt">
       <div class="item_title">Init Properties</div>
       <div class="opt">
-        <div class="opt">
-          <div class="opt_inside">
-            <label for="disable">Disable : </label>
-            <input
-              type="checkbox"
-              id="disable"
-              name="disable"
-              value="disable"
-            />
-          </div>
+        <div class="opt_inside">
+          <label for="disable">Disable : </label>
+          <input
+            type="checkbox"
+            id="disable"
+            name="disable"
+            value="disable"
+            v-model="option.disable"
+          />
         </div>
-        <div class="opt">
-          <div class="opt_inside">
-            <label for="debugMode">Debug Mode : </label>
-            <input
-              type="checkbox"
-              id="debugMode"
-              name="debugMode"
-              value="debugMode"
-              checked
-            />
-          </div>
+      </div>
+      <div class="opt">
+        <div class="opt_inside">
+          <label for="debugMode">Debug Mode : </label>
+          <input
+            type="checkbox"
+            id="debugMode"
+            name="debugMode"
+            value="debugMode"
+            checked
+            v-model="option.debugMode"
+          />
         </div>
-        <div class="opt">
-          <div class="opt_inside">
-            <label for="passive">Passive : </label>
-            <input
-              type="checkbox"
-              id="passive"
-              name="passive"
-              value="passive"
-            />
-          </div>
+      </div>
+      <div class="opt">
+        <div class="opt_inside">
+          <label for="passive">Passive : </label>
+          <input
+            type="checkbox"
+            id="passive"
+            name="passive"
+            value="passive"
+            v-model="option.passive"
+          />
         </div>
-        <!-- version -->
-        <div class="opt">
-          <div class="opt_inside">
-            Version
-            <select name="version" id="version">
-              <option value="0" disabled>0.3</option>
-              <option value="0.1" disabled>0.5</option>
-              <option value="0.2" disabled>0.6</option>
-              <option value="0.2" disabled>0.7</option>
-              <option value="0.2" disabled>0.8.1</option>
-              <option value="0.2">0.8.8</option>
-            </select>
-          </div>
+      </div>
+      <!-- version -->
+      <div class="opt">
+        <div class="opt_inside">
+          Version
+          <select name="version" id="version" v-model="version">
+            <option value="0.3" disabled>0.3</option>
+            <option value="0.5" disabled>0.5</option>
+            <option value="0.6" disabled>0.6</option>
+            <option value="0.7" disabled>0.7</option>
+            <option value="0.8.1" disabled>0.8.1</option>
+            <option value="0.8.8" selected>0.8.8</option>
+          </select>
         </div>
       </div>
     </div>
@@ -666,52 +775,58 @@ let plg_opt = ref("animation");
       <!-- inti with reset as select option  -->
       <div class="opt">
         <div class="opt_inside">
-          <button @click="JOS.init(initWithReset)">Init</button>
+          <button class="butt_in" @click="but_init()">Init</button>
           <!-- select -->
-          <select name="initWithReset" id="initWithReset">
-            <option value="Reset">Reset</option>
-            <option value="options">Custom Options</option>
+          <select name="init" id="init" v-model="init">
+            <option value="0">Reset (Init with default options)</option>
+            <option value="1" selected>Init (Init with current options)</option>
           </select>
         </div>
       </div>
       <!-- refresh button-->
       <div class="opt">
         <div class="opt_inside">
-          <button @click="JOS.refresh()">Refresh</button>
+          <button class="butt_in" @click="JOS.refresh()">Refresh</button>
         </div>
       </div>
       <!-- pause button -->
       <div class="opt">
         <div class="opt_inside">
-          <button @click="JOS.stop(-1)">Pause</button>
+          <button class="butt_in" @click="but_stop()">Stop</button>
           <!-- select with type of pause -->
-          <select name="pause" id="pause">
+          <select name="pause" id="pause" v-model="stop">
             <option value="0">Stop at final state</option>
             <option value="1">Stop at initial state</option>
-            <option value="-1">Pause at current state</option>
+            <option value="-1" selected>Pause at current state</option>
           </select>
         </div>
       </div>
       <!-- start button -->
       <div class="opt">
         <div class="opt_inside">
-          <button @click="JOS.start(0)">Start</button>
+          <button class="butt_in" @click="but_start()">Start</button>
           <!-- select with type of start -->
-          <select name="start" id="start">
+          <select name="start" id="start" v-model="start">
             <option value="0">Normal/Full start</option>
-            <option value="-1">Resume from current state</option>
+            <option value="-1" selected>Resume from current state</option>
           </select>
         </div>
       </div>
 
       <!-- destroy -->
       <div class="opt">
-        <div class="opt_inside">
-          <button @click="JOS.destroy(0)">Destroy</button>
+        <div class="opt_inside dis">
+          <button class="butt_in" @click="but_destroy()" disabled>
+            Destroy
+          </button>
           <!-- select with type of destroy -->
-          <select name="destroy" id="destroy">
-            <option value="0">Destroy JOS instance excluding stylesheet</option>
-            <option value="1">Full Destroy along with JOS-stylesheet</option>
+          <select name="destroy" id="destroy" v-model="destroy">
+            <option value="0" disabled>
+              Destroy JOS instance excluding stylesheet
+            </option>
+            <option value="1" disabled selected>
+              Full Destroy along with JOS-stylesheet
+            </option>
           </select>
         </div>
       </div>
@@ -725,14 +840,24 @@ let plg_opt = ref("animation");
         <div class="opt_inside">
           <label for="darkMode">Cube Color : </label>
           <!-- color picker -->
-          <input type="color" id="cubeColor" name="cubeColor" value="#ffffff" />
+          <input
+            type="color"
+            id="cubeColor"
+            name="cubeColor"
+            v-model="playgroundSettings.cubeColor"
+          />
         </div>
       </div>
       <div class="opt">
         <div class="opt_inside">
           <label for="darkMode">Background Color : </label>
           <!-- color picker -->
-          <input type="color" id="bgColor" name="bgColor" value="#000" />
+          <input
+            type="color"
+            id="bgColor"
+            name="bgColor"
+            v-model="playgroundSettings.backgroundColor"
+          />
         </div>
       </div>
       <!-- number of cubes -->
@@ -745,7 +870,7 @@ let plg_opt = ref("animation");
             id="numOfCubes"
             name="numOfCubes"
             min="1"
-            value="10"
+            v-model="playgroundSettings.totalCubes"
           />
         </div>
       </div>
@@ -754,15 +879,60 @@ let plg_opt = ref("animation");
       <div class="opt">
         <div class="opt_inside">
           <label for="newCube">New Cube Option : </label>
-          <input type="checkbox" id="newCube" name="newCube" value="newCube" />
+          <input
+            type="checkbox"
+            id="newCube"
+            name="newCube"
+            value="newCube"
+            v-model="playgroundSettings.newCubeOption"
+          />
+        </div>
+      </div>
+
+      <div class="opt">
+        <div class="opt_inside">
+          <label for="rootm">RootMargin Border : </label>
+          <input
+            type="checkbox"
+            id="rootm"
+            name="rootm"
+            v-model="playgroundSettings.rootmarginVisible"
+          />
         </div>
       </div>
     </div>
   </section>
-  <TestArea />
+
+  <TestArea v-if="refe" :playgroundSettings="playgroundSettings" />
 </template>
 <style scoped>
 /* checkbox style */
+
+.dis,
+.dis * {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.butt_in {
+  width: 5vw;
+  height: 2vw;
+  border-radius: 0.2vw;
+
+  background-color: var(--color-tertiary);
+  border: 0.1vw solid var(--color-tertiary);
+  cursor: pointer;
+  font-family: Poppins, sans-serif;
+  font-size: 1vw;
+  color: var(--color-primary);
+}
+.butt_in:hover {
+  background-color: var(--color-secondary);
+}
+.butt_in:disabled {
+  background-color: var(--color-tertiary);
+  color: var(--color-secondary);
+  cursor: not-allowed;
+}
 input[type="checkbox"] {
   width: 1vw;
   height: 1vw;
