@@ -953,6 +953,7 @@ window["refree"] = refre;
             id="rootm"
             name="rootm"
             v-model="playgroundSettings.rootmarginVisible"
+            onchange=""
           />
         </div>
       </div>

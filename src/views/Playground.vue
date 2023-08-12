@@ -43,10 +43,23 @@ onMounted(() => {
 
 const refe = ref(true);
 
+const marginBorder = ref(false);
+
 let plg_opt = ref("animation");
+
+function change_rootBorder() {
+  marginBorder = !marginBorder;
+}
+
+window["change_rootBorder_ref"] = change_rootBorder;
 </script>
 
 <template>
+  <div
+    v-if="marginBorder"
+    class="rootMargin_Border"
+    id="rootMargin_Border"
+  ></div>
   <section>
     <div class="sandbox_try">
       <div class="bold_tes">Play & fiddle with JOS settings</div>
@@ -76,6 +89,17 @@ let plg_opt = ref("animation");
 </template>
 <style scoped>
 /* checkbox style */
+.rootMargin_Border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 80vh;
+  /* border-top: 0.2vw solid var(--color-secondary); */
+  border-bottom: 0.2vw solid var(--color-secondary);
+
+  z-index: 100;
+}
 iframe {
   height: 200px;
   width: 100%;
