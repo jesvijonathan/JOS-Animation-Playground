@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import Root from "@/views/Root.vue";
 import Playground from "@/views/Playground.vue";
+import PlaygroundFrame from "@/views/PlaygroundFrame.vue";
 import PathNotFound from "@/views/pathnotfound.vue";
 
 // "/" should redirect to "/home"
@@ -28,6 +29,11 @@ const router = createRouter({
       path: "/playground",
       name: "playground",
       component: Playground,
+    },
+    {
+      path: "/playgroundFrame",
+      name: "playgroundFrame",
+      component: PlaygroundFrame,
     },
     {
       path: "/demo",

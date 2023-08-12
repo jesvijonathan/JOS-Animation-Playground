@@ -26,6 +26,8 @@ const { FooterNote } = defineProps(["FooterNote"]);
               data-nextScroll="introduction"
               data-jos_animation="flip"
               data-jos_delay="0"
+              href="https://github.com/jesvijonathan/JOS-Animation-Library"
+              target="_blank"
             >
               <i class="fa-brands fa-github"></i
             ></a>
@@ -33,6 +35,8 @@ const { FooterNote } = defineProps(["FooterNote"]);
               class="circ_lo jos"
               data-jos_animation="flip"
               data-jos_delay="0.1"
+              href="https://codepen.io/jesvijonathan/pen/XWyLejd"
+              target="_blank"
             >
               <i class="fa-brands fa-codepen"></i
             ></a>
@@ -40,6 +44,8 @@ const { FooterNote } = defineProps(["FooterNote"]);
               class="circ_lo jos"
               data-jos_animation="flip"
               data-jos_delay="0.2"
+              href="https://www.npmjs.com/package/jos-animation"
+              target="_blank"
             >
               <i class="fa-brands fa-npm"></i
             ></a>

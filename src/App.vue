@@ -23,7 +23,13 @@ import { ref } from "vue";
 // Loader
 const loader = ref(false);
 
+const HUD = ref(true);
 onload = () => {
+  const path = window.location.pathname.split("/");
+  if (path[2] == "PlaygroundFrame") {
+    HUD.value = false;
+  }
+
   setTimeout(() => {
     document.querySelector(".con").style.opacity = 0;
     document.getElementById("loader_text").classList.add("loader_anime");
@@ -146,25 +152,36 @@ const msg = ref("Error 404");
 <template>
   <BlackScreen style="z-index: 99999" v-if="$route.path == '/404'" :msg="msg" />
 
-  <Loader v-show="loader" />
-  <BlackScreen v-show="loader" />
-  <Navbar
-    v-show="!loader"
-    :isDark="isDark"
-    :navTitle="navTitle"
-    :curButton="curButton"
-  />
-  <Hud :moveToID="moveToID" />
-  <ToolTips />
+  <div v-if="HUD">
+    <Loader v-show="loader" />
+    <BlackScreen v-show="loader" />
+    <Navbar
+      v-show="!loader"
+      :isDark="isDark"
+      :navTitle="navTitle"
+      :curButton="curButton"
+    />
+    <Hud :moveToID="moveToID" />
+    <ToolTips />
 
-  <router-view
-    :loader="loader"
-    :isDark="isDark"
-    :navTitle="navTitle"
-    :moveToID="moveToID"
-  />
+    <router-view
+      :loader="loader"
+      :isDark="isDark"
+      :navTitle="navTitle"
+      :moveToID="moveToID"
+    />
 
-  <Footer FooterNote="It's a response, A work of Art  " />
+    <Footer FooterNote="It's a response, A work of Art  " />
+  </div>
+
+  <div v-if="!HUD">
+    <router-view
+      :loader="loader"
+      :isDark="isDark"
+      :navTitle="navTitle"
+      :moveToID="moveToID"
+    />
+  </div>
 </template>
 
 <style scoped></style>

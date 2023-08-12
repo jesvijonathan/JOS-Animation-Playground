@@ -86,6 +86,9 @@ const router = useRouter();
   </div>
 </template>
 <style scoped>
+.navbutton {
+  cursor: pointer;
+}
 .jos_navbar_line {
   width: 0.1vw;
   height: 2.4vw;
