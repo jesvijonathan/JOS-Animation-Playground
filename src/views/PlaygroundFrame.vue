@@ -27,24 +27,32 @@ function but_destroy() {
 }
 
 const default_option = {
+  animation: "flip",
+  delay: 0,
+  duration: 0.5,
+  timingFunction: "ease",
+  once: false,
+  mirror: true,
+  scrollDirection: "none",
+  startVisible: false,
+  scrollProgressDisable: false,
+  animationInverse: "",
+  threshold: 0,
+  intersectionRatio: 0,
+
+  rootMargin_top: "10%",
+  rootMargin_right: 0, //
+  rootMargin_bottom: "20%",
+  rootMargin_left: 0, //
+  rootMargin: "10% 0% 20% 0%",
+
+  invoke: "none",
+  invokeOut: "none",
+  scroll: "none",
+
   disable: false,
   debugMode: true,
   passive: false,
-  once: false,
-  animation: "flip",
-  animationInverse: "",
-  timingFunction: "ease",
-  mirror: true,
-  threshold: 0,
-  delay: 0,
-  duration: 0.5,
-  startVisible: false,
-  scrollDirection: "none",
-  scrollProgressDisable: false,
-  intersectionRatio: 0,
-  rootMargin_top: "10%",
-  rootMargin_bottom: "20%",
-  rootMargin: "10% 0% 20% 0%",
 };
 
 let option = ref({
@@ -105,6 +113,8 @@ function but_init() {
         console.log(option.value);
       } else {
         JOS.init(default_option);
+        option = default_option;
+
         console.log(default_option);
       }
     }, 100);
@@ -176,7 +186,7 @@ window["refree"] = refre;
         >
           Playground Settings
         </div>
-        <div>
+        <div class="but_flex">
           <button
             class="rest"
             @click="
@@ -185,6 +195,16 @@ window["refree"] = refre;
             "
           >
             Apply
+          </button>
+
+          <button
+            class="rest"
+            @click="
+              init = 0;
+              but_init();
+            "
+          >
+            Reset
           </button>
         </div>
       </div>
@@ -942,6 +962,10 @@ window["refree"] = refre;
   <TestArea v-if="refe" :playgroundSettings="playgroundSettings" />
 </template>
 <style scoped>
+.but_flex {
+  display: flex;
+  gap: 2vw;
+}
 /* checkbox style */
 .rest {
   margin-top: 4vw;
