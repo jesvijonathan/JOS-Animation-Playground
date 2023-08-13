@@ -26,7 +26,7 @@ const loader = ref(true);
 const HUD = ref(true);
 onload = () => {
   const path = window.location.pathname.split("/");
-  if (path[2] == "PlaygroundFrame") {
+  if (path[1] == "PlaygroundFrame") {
     HUD.value = false;
   }
 
