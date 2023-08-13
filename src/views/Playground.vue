@@ -43,7 +43,7 @@ onMounted(() => {
 
 const refe = ref(true);
 
-const marginBorder = ref(false);
+let marginBorder = ref(false);
 
 let plg_opt = ref("animation");
 

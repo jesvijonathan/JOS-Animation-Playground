@@ -7,16 +7,16 @@ import Footer from "@/components/Footer.vue";
 // import Noise from "@/components/noise.vue";
 import BlackScreen from "@/components/BlackScreen.vue";
 
-// import Home from "@/views/home.vue";
-// import Brochure from "@/views/brochure.vue";
-// import About from "@/views/about.vue";
-// import Intro from "@/views/intro.vue";
-// import Features from "@/views/features.vue";
-// import Projects from "@/views/projects.vue";
+import Home from "@/views/home.vue";
+import Brochure from "@/views/brochure.vue";
+import About from "@/views/about.vue";
+import Intro from "@/views/intro.vue";
+import Features from "@/views/features.vue";
+import Projects from "@/views/projects.vue";
 
-// import Root from "@/views/root.vue";
-// import Playground from "@/views/playground.vue";
-// import PathNotFound from "@/views/pathnotfound.vue";
+import Root from "@/views/root.vue";
+import Playground from "@/views/playground.vue";
+import PathNotFound from "@/views/pathnotfound.vue";
 
 import { ref } from "vue";
 

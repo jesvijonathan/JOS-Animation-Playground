@@ -10,7 +10,7 @@ import PathNotFound from "@/views/PathNotFound.vue";
 // if demo, redirect to https://jesvijonathan.github.io/JOS-Animation-Library/
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: "/",

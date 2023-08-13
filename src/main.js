@@ -1,6 +1,5 @@
 import { createApp } from "vue";
 import { watch, nextTick } from "vue";
-import { onMounted, onUnmounted, ref } from "vue";
 
 import "jos-animation/dist/jos.css";
 import JOS from "jos-animation";
