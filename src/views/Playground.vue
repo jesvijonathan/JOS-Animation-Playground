@@ -1,5 +1,5 @@
 <script setup>
-import TestArea from "@/views/TestArea.vue";
+// import TestArea from "@/views/TestArea.vue";
 import { computed, defineProps } from "vue";
 import { onMounted } from "vue";
 import { ref } from "vue";

@@ -1,9 +1,9 @@
 <script setup>
-import Home from "@/views/home.vue";
-import Brochure from "@/views/brochure.vue";
-import About from "@/views/about.vue";
-import Intro from "@/views/intro.vue";
-import Features from "@/views/features.vue";
+import Home from "@/views/Home.vue";
+import Brochure from "@/views/Brochure.vue";
+import About from "@/views/About.vue";
+import Intro from "@/views/Intro.vue";
+import Features from "@/views/Features.vue";
 
 // get props from app.vue
 import { defineProps } from "vue";

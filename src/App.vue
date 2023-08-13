@@ -1,22 +1,22 @@
 <script setup>
-import Loader from "@/components/loader.vue";
-import Navbar from "@/components/navbar.vue";
-import Hud from "@/components/hud.vue";
-import ToolTips from "@/components/toolTips.vue";
-import Footer from "@/components/footer.vue";
+import Loader from "@/components/Loader.vue";
+import Navbar from "@/components/Navbar.vue";
+import Hud from "@/components/Hud.vue";
+import ToolTips from "@/components/ToolTips.vue";
+import Footer from "@/components/Footer.vue";
 // import Noise from "@/components/noise.vue";
-import BlackScreen from "@/components/blackscreen.vue";
+import BlackScreen from "@/components/BlackScreen.vue";
 
-import Home from "@/views/home.vue";
-import Brochure from "@/views/brochure.vue";
-import About from "@/views/about.vue";
-import Intro from "@/views/intro.vue";
-import Features from "@/views/features.vue";
-import Projects from "@/views/projects.vue";
+// import Home from "@/views/home.vue";
+// import Brochure from "@/views/brochure.vue";
+// import About from "@/views/about.vue";
+// import Intro from "@/views/intro.vue";
+// import Features from "@/views/features.vue";
+// import Projects from "@/views/projects.vue";
 
-import Root from "@/views/root.vue";
-import Playground from "@/views/playground.vue";
-import PathNotFound from "@/views/pathnotfound.vue";
+// import Root from "@/views/root.vue";
+// import Playground from "@/views/playground.vue";
+// import PathNotFound from "@/views/pathnotfound.vue";
 
 import { ref } from "vue";
 
