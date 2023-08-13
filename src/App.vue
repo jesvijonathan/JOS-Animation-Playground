@@ -21,7 +21,7 @@ import PathNotFound from "@/views/pathnotfound.vue";
 import { ref } from "vue";
 
 // Loader
-const loader = ref(false);
+const loader = ref(true);
 
 const HUD = ref(true);
 onload = () => {
