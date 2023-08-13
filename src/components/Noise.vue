@@ -1,5 +1,5 @@
 <script setup>
-import noises from "@/assets/noise.webp";
+// import noises from "@/assets/Noise.webp";
 </script>
 <template>
   <div class="noise-container"></div>
