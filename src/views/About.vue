@@ -45,7 +45,6 @@ onMounted(() => {
     class="jos"
     data-jos_rootMargin="-800px 0px 0px 0px"
     data-jos_animation="no-transition"
-    data-jos_invoke="hide_fixed"
     id="installation"
   >
     <div class="home_about">
