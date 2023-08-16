@@ -59,11 +59,35 @@ const { FooterNote } = defineProps(["FooterNote"]);
               <div class="foot_ser_title">About JOS</div>
               <div class="foot_ser_content">
                 <ul>
-                  <li><a href="" target="_blank">About Us</a></li>
-                  <li><a href="" target="_blank">JOS Community</a></li>
-                  <li><a href="" target="_blank">Meet The Team</a></li>
-                  <li><a href="" target="_blank">Our Services</a></li>
-                  <li><a href="" target="_blank">Blog & News</a></li>
+                  <li>
+                    <a href="https://g.co/kgs/hHcihX" target="_blank"
+                      >About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/jesvijonathan/JOS-Animation-Library/discussions"
+                      target="_blank"
+                      >JOS Community</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://jesvi.pythonanywhere.com/" target="_blank"
+                      >Meet The Team (Me)</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://github.com/jesvijonathan" target="_blank"
+                      >What I do</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/jesvijonathan/JOS-Animation-Library"
+                      target="_blank"
+                      >Blog & News</a
+                    >
+                  </li>
                 </ul>
               </div>
             </div>
@@ -75,11 +99,41 @@ const { FooterNote } = defineProps(["FooterNote"]);
               <div class="foot_ser_title">Useful Links</div>
               <div class="foot_ser_content">
                 <ul>
-                  <li><a href="" target="_blank">JOS Powered Sites</a></li>
-                  <li><a href="" target="_blank">Tutorials Playlist</a></li>
-                  <li><a href="" target="_blank">Documentation</a></li>
-                  <li><a href="" target="_blank">Download</a></li>
-                  <li><a href="" target="_blank">View on Github</a></li>
+                  <li>
+                    <a
+                      href="https://github.com/jesvijonathan/JOS-Animation-Library/wiki#used-in"
+                      target="_blank"
+                      >JOS Powered Sites</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.youtube.com/watch?v=ziR95EKKttc"
+                      target="_blank"
+                      >Tutorials Playlist</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/jesvijonathan/JOS-Animation-Library/wiki"
+                      target="_blank"
+                      >Documentation</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/jesvijonathan/JOS-Animation-Library/releases/latest"
+                      target="_blank"
+                      >Download</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/jesvijonathan/JOS-Animation-Library"
+                      target="_blank"
+                      >View on Github</a
+                    >
+                  </li>
                 </ul>
               </div>
             </div>
@@ -92,11 +146,38 @@ const { FooterNote } = defineProps(["FooterNote"]);
               <div class="foot_ser_title">Support</div>
               <div class="foot_ser_content">
                 <ul>
-                  <li><a href="" target="_blank">Terms & Condition</a></li>
-                  <li><a href="" target="_blank">Report Issues</a></li>
-                  <li><a href="" target="_blank">Privacy Policy</a></li>
-                  <li><a href="" target="_blank">Contact Us</a></li>
-                  <li><a href="" target="_blank">FAQs</a></li>
+                  <li>
+                    <a
+                      href="https://raw.githubusercontent.com/jesvijonathan/JOS-Animation-Library/master/LICENSE.md"
+                      target="_blank"
+                      >Terms & Condition</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/jesvijonathan/JOS-Animation-Library/issues"
+                      target="_blank"
+                      >Report Issues</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="data:text/html;charset=UTF-8,%3Ch1%3EPrivacy%20Policy%20for%20JOS%20Animation%3C/h1%3E%0A%3Cp%3EAt%20JOS%20Animation%2C%20accessible%20from%20https%3A//jos-animation.vercel.app%2C%20one%20of%20our%20main%20priorities%20is%20the%20privacy%20of%20our%20visitors.%20This%20Privacy%20Policy%20document%20contains%20types%20of%20information%20that%20is%20collected%20and%20recorded%20by%20JOS%20Animation%20and%20how%20we%20use%20it.%3C/p%3E%0A%3Cp%3EIf%20you%20have%20additional%20questions%20or%20require%20more%20information%20about%20our%20Privacy%20Policy%2C%20do%20not%20hesitate%20to%20contact%20us.%3C/p%3E%0A...%0A%3Ch2%3EContact%20Us%3C/h2%3E%0A%3Cp%3EIf%20you%20have%20any%20questions%20or%20suggestions%20about%20our%20Privacy%20Policy%2C%20do%20not%20hesitate%20to%20contact%20us.%3C/p%3E"
+                      download="PrivacyPolicy.html"
+                      target="_blank"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a href="jesvi22j@gmail.com" target="_blank">Contact Us</a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/jesvijonathan/JOS-Animation-Library/discussions"
+                      target="_blank"
+                      >FAQs</a
+                    >
+                  </li>
                 </ul>
               </div>
             </div>
@@ -106,7 +187,10 @@ const { FooterNote } = defineProps(["FooterNote"]);
       <div class="footer_content_2">
         <div class="footer_rec jos" data-jos_animation="stretch">
           <a href="" target="_blank">JOS</a>
-          <a class="developer" href="" target="_blank"
+          <a
+            class="developer"
+            href="https://jesvi.pythonanywhere.com/"
+            target="_blank"
             >Developed By Jesvi Jonathan</a
           >
         </div>

@@ -2,6 +2,8 @@
 // on update JOS.refresh() during every Dom update
 import { ref } from "vue";
 import { onMounted, onUpdated } from "vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
 
 // copy button
 const tooltext = document.getElementById("tooltip-text");
@@ -85,22 +87,15 @@ onMounted(() => {
               <div class="step1_demo">
                 <pre class="step1_demo_code">
   <code>
-    &lt;link
-      id="jos-stylesheet"
-      rel="stylesheet"
-      href="https://unpkg.com/jos-animation/dist/jos.css"
-      crossorigin="anonymous"
-    /&gt;
+    &lt;link id="jos-stylesheet" rel="stylesheet" href="https://unpkg.com/jos-animation/dist/jos.css" crossorigin="anonymous" /&gt;
   </code>
 </pre>
 
                 <button
-                  class="jos copy_but"
+                  class="jos copy_but fa-regular fa-clipboard"
                   data-hover_data="Copy"
                   @click="copy($event.target)"
-                >
-                  <i class="fa-regular fa-clipboard"></i>
-                </button>
+                ></button>
               </div>
             </div>
             <div class="step_code_con">
@@ -114,12 +109,10 @@ onMounted(() => {
   </code>
                 </pre>
                 <button
-                  class="jos copy_but"
+                  class="jos copy_but fa-regular fa-clipboard"
                   data-hover_data="Copy"
                   @click="copy($event.target)"
-                >
-                  <i class="fa-regular fa-clipboard"></i>
-                </button>
+                ></button>
               </div>
             </div>
 
@@ -135,13 +128,12 @@ onMounted(() => {
     npm i jos-animation
   </code>
                 </pre>
+
                 <button
-                  class="jos copy_but"
+                  class="jos copy_but fa-regular fa-clipboard"
                   data-hover_data="Copy"
                   @click="copy($event.target)"
-                >
-                  <i class="fa-regular fa-clipboard"></i>
-                </button>
+                ></button>
               </div>
             </div>
           </div>
@@ -171,12 +163,10 @@ onMounted(() => {
   </code>
                 </pre>
                 <button
-                  class="jos copy_but"
+                  class="jos copy_but fa-regular fa-clipboard"
                   data-hover_data="Copy"
                   @click="copy($event.target)"
-                >
-                  <i class="fa-regular fa-clipboard"></i>
-                </button>
+                ></button>
               </div>
             </div>
             <div class="step_code_con">
@@ -193,12 +183,10 @@ onMounted(() => {
   </code>
                 </pre>
                 <button
-                  class="jos copy_but"
+                  class="jos copy_but fa-regular fa-clipboard"
                   data-hover_data="Copy"
                   @click="copy($event.target)"
-                >
-                  <i class="fa-regular fa-clipboard"></i>
-                </button>
+                ></button>
               </div>
             </div>
           </div>
@@ -231,12 +219,10 @@ onMounted(() => {
   </code>
                 </pre>
                 <button
-                  class="jos copy_but"
+                  class="jos copy_but fa-regular fa-clipboard"
                   data-hover_data="Copy"
                   @click="copy($event.target)"
-                >
-                  <i class="fa-regular fa-clipboard"></i>
-                </button>
+                ></button>
               </div>
             </div>
             <div class="step_code_con">
@@ -254,20 +240,28 @@ onMounted(() => {
   </code>
                 </pre>
                 <button
-                  class="jos copy_but"
+                  class="jos copy_but fa-regular fa-clipboard"
                   data-hover_data="Copy"
                   @click="copy($event.target)"
-                >
-                  <i class="fa-regular fa-clipboard"></i>
-                </button>
+                ></button>
               </div>
             </div>
           </div>
 
           <div class="line"></div>
           <div class="butvon">
-            <button class="Button_1">View Tutorials</button>
-            <button class="Button_1">Projects Using JOS</button>
+            <a
+              href="https://www.youtube.com/watch?v=ziR95EKKttc"
+              target="_blank"
+              class="Button_1"
+              >View Tutorials</a
+            >
+            <a
+              href="https://github.com/jesvijonathan/JOS-Animation-Library/wiki#used-in"
+              target="_blank"
+              class="Button_1"
+              >Projects Using JOS</a
+            >
             <!-- <button class="Button_1">Feature Website</button> -->
           </div>
         </div>
@@ -278,6 +272,7 @@ onMounted(() => {
           class="scroller jos"
           data-jos_scroll="scrolling_text"
           data-hover_data="Click to move to Playground"
+          @click="router.push('/playground')"
         >
           <div class="more_details_title">
             <div class="more_text">Test it in Playground</div>
@@ -571,5 +566,7 @@ section {
   position: relative;
   overflow: hidden;
   background-color: var(--color-background);
+}
+.fa-clipboard {
 }
 </style>

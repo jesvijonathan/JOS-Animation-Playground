@@ -1,6 +1,7 @@
 <script setup>
 // on update JOS.refresh() during every Dom update
 import { onMounted, onUpdated } from "vue";
+import { useRouter } from "vue-router";
 
 onMounted(() => {
   const scrolltext = document.getElementById("scroller2");
@@ -20,12 +21,38 @@ onMounted(() => {
     oldScroll = e.jos.scrollProgress;
   }
 
+  const fanc = document.getElementById("fancy_text");
+
+  function fancy_text(e) {
+    const scroll = e.jos.scrollProgress * 1.4;
+    fanc.style.transform = "translateY(" + e.jos.scrollProgress * 10 + "vw)";
+    fanc.style.opacity = 1 - scroll;
+    // fanc.innerHTML = scroll;
+  }
+
   window["scrolling_text2"] = scrolling_text2;
+
+  window["fancy_text"] = fancy_text;
 });
+
+const router = useRouter();
 </script>
 
 <template>
   <section>
+    <div
+      id="fancy_text"
+      class="bold_display jos"
+      data-jos_scroll="fancy_text"
+      data-jos_animation="static"
+      data-jos_rootMargin_top="0%"
+      data-jos_rootMargin_bottom="0%"
+    >
+      <div style="width: 60%; text-align: center; z-index: -1">
+        <b>T</b>his is a work of Art, <b>A</b>n In-house library, <b>R</b>eady
+        to power your next application ⚡
+      </div>
+    </div>
     <!-- faetures on why its better  -->
 
     <!-- very lightweight, the library is less than 2kb -->
@@ -134,7 +161,12 @@ onMounted(() => {
         </div>
       </div>
     </div>
-    <div id="scrolltext" class="scrolling_text jos">
+    <!-- on click move to playground route -->
+    <div
+      id="scrolltext"
+      class="scrolling_text jos"
+      @click="router.push('/playground')"
+    >
       <div
         id="scroller2"
         class="scroller jos"
@@ -360,12 +392,17 @@ section {
 }
 
 .features {
-  margin: 10vw 0vw 4vw 0vw;
+  margin: 10vw 0vw 7vw 0vw;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  background-color: var(--color-background);
+  padding-top: 10vw;
+  position: relative;
+  opacity: 1;
 }
 .features-container {
   width: 80%;
@@ -461,5 +498,21 @@ li {
   color: var(--color-primary);
   opacity: 0.8;
   list-style: none;
+}
+.bold_display {
+  font-weight: 600;
+  font-size: 2.4vw;
+  color: var(--color-text);
+  margin-bottom: 1vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10vw 0vw;
+  font-family: "Poppins", sans-serif;
+  transition: 0s;
+  margin-bottom: -7vw;
+  z-index: -1 !important;
 }
 </style>

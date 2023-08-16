@@ -3,6 +3,9 @@
 import { ref } from "vue";
 import { onMounted, onUpdated } from "vue";
 
+import { useRouter } from "vue-router";
+const router = useRouter();
+
 onMounted(() => {
   let fix_elem = document.getElementById("intro_1");
   let section = document.getElementById("features");
@@ -62,8 +65,15 @@ onMounted(() => {
               and fiddle with.
             </div>
             <div class="feature_button">
-              <button class="button">Demo</button>
-              <button class="button">Documentation</button>
+              <button class="button" @click="router.push('/playground')">
+                Demo
+              </button>
+              <a
+                class="button"
+                href="https://github.com/jesvijonathan/JOS-Animation-Library/wiki"
+                target="_blank"
+                >Documentation</a
+              >
             </div>
           </div>
         </div>
@@ -102,8 +112,16 @@ onMounted(() => {
               comes in a very light weight (2kb) package...
             </div>
             <div class="feature_button">
-              <button class="button">Docs</button>
-              <button class="button">Demonstration</button>
+              <a
+                class="button"
+                href="https://github.com/jesvijonathan/JOS-Animation-Library/wiki"
+                target="_blank"
+              >
+                Docs
+              </a>
+              <button class="button" @click="router.push('/playground')">
+                Demonstration
+              </button>
             </div>
           </div>
         </div>
@@ -129,6 +147,7 @@ onMounted(() => {
   cursor: pointer;
   font-weight: 100;
   transition: 0.3s;
+  font-family: "Poppins", sans-serif;
 }
 .button:hover {
   background: var(--color-primary);

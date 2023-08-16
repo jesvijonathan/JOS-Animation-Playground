@@ -1,6 +1,7 @@
 <script setup>
 defineProps(["isDark", "navTitle", "curButton"]);
 
+let isDark = true;
 function toggleDarkMode(e) {
   this.isDark = !this.isDark;
   console.log(this.isDark);
@@ -21,6 +22,7 @@ const router = useRouter();
     <div class="navbar_left">
       <a
         href="#"
+        @click="router.push('/')"
         class="jos_title jos"
         data-jos_animation="zoom"
         data-jos_delay="0.8"
@@ -52,7 +54,8 @@ const router = useRouter();
         >{{ curButton }}</a
       >
       <a
-        href=""
+        href="https://github.com/jesvijonathan/JOS-Animation-Library/wiki"
+        target="_blank"
         class="navbutton jos"
         data-jos_animation="zoom-down"
         data-jos_delay="0.3"

@@ -47,8 +47,13 @@ import web8 from "@/assets/floating_websites/web8.png";
           data-jos_animation="fade-right"
           data-jos_delay="0.5"
         >
-          <button class="Button_1">Get Started</button>
-          <button class="Button_1">Documentation</button>
+          <a href="#features" class="Button_1">Get Started</a>
+          <a
+            href="https://github.com/jesvijonathan/JOS-Animation-Library/wiki"
+            target="_blank"
+            class="Button_1"
+            >Documentation</a
+          >
         </div>
       </div>
     </div>
@@ -59,42 +64,42 @@ import web8 from "@/assets/floating_websites/web8.png";
         data-jos_animation="zoom"
       >
         <a
-          href=""
+          href="https://github.com/jesvijonathan/JOS-Animation-Library/wiki#used-in"
           target="_blank"
           class="showcase_it piece_1"
           data-hover_data="Projects made using JOS"
         ></a>
 
         <a
-          href=""
+          href="https://github.com/jesvijonathan/JOS-Animation-Library/wiki#used-in"
           target="_blank"
           class="showcase_it piece_2"
           data-hover_data="Projects made using JOS"
         ></a>
 
         <a
-          href=""
+          href="https://github.com/jesvijonathan/JOS-Animation-Library/wiki#used-in"
           target="_blank"
           class="showcase_it piece_3"
           data-hover_data="Projects made using JOS"
         ></a>
 
         <a
-          href=""
+          href="https://github.com/jesvijonathan/JOS-Animation-Library/wiki#used-in"
           target="_blank"
           class="showcase_it piece_4"
           data-hover_data="Projects made using JOS"
         ></a>
 
         <a
-          href=""
+          href="https://github.com/jesvijonathan/JOS-Animation-Library/wiki#used-in"
           target="_blank"
           class="showcase_it piece_5"
           data-hover_data="Projects made using JOS"
         ></a>
 
         <a
-          href=""
+          href="https://github.com/jesvijonathan/JOS-Animation-Library/wiki#used-in"
           target="_blank"
           class="showcase_it piece_1 piece_7"
           data-hover_data="Projects made using JOS"
@@ -102,7 +107,7 @@ import web8 from "@/assets/floating_websites/web8.png";
         ></a>
 
         <a
-          href=""
+          href="https://github.com/jesvijonathan/JOS-Animation-Library/wiki#used-in"
           target="_blank"
           class="showcase_it piece_2 piece_6"
           data-hover_data="Projects made using JOS"
@@ -254,6 +259,7 @@ import web8 from "@/assets/floating_websites/web8.png";
   padding: 0.5vw 1vw;
   cursor: pointer;
   transition: 0.3s;
+  font-family: "Poppins", sans-serif;
 }
 
 .Button_1:hover {
