@@ -3,9 +3,9 @@ defineProps(["isDark", "navTitle", "curButton"]);
 
 let isDark = true;
 function toggleDarkMode(e) {
-  this.isDark = !this.isDark;
+  isDark = !isDark;
   console.log(this.isDark);
-  if (this.isDark) {
+  if (isDark) {
     document.body.classList.add("dark");
     document.body.classList.remove("light");
   } else {

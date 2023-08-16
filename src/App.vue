@@ -21,7 +21,7 @@ import BlackScreen from "@/components/BlackScreen.vue";
 import { ref } from "vue";
 
 // Loader
-const loader = ref(true);
+const loader = ref(false);
 
 const HUD = ref(true);
 onload = () => {
