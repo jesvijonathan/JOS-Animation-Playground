@@ -16,7 +16,7 @@ function scrollToNext(e) {
     data-jos_animation="fade-down"
     data-jos_delay="0.9"
     :data-hover_data="moveToID"
-    @click="scrollToNext(this.$el)"
+    @click="scrollToNext($el)"
   >
     <i class="fa-solid fa-arrow-down"></i>
   </div>
