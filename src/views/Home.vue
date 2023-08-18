@@ -14,14 +14,18 @@ import web8 from "@/assets/floating_websites/web8.png";
   <section id="introduction">
     <div class="home_title">
       <div
-        class="jos"
+        class="jos home_tit_mar"
         data-jos_animation="no-display"
         data-jos_invoke="heading"
         data-nextScroll="features"
         data-intro_title="Introduction"
         style="margin-top: 4vw"
       >
-        <div style="display: flex" class="jos" data-jos_animation="fade-right">
+        <div
+          style="display: flex"
+          class="jos home_de"
+          data-jos_animation="fade-right"
+        >
           <div class="jos" data-jos_animation="flip-down">So</div>
           <div class="jos" data-jos_animation="flip-down" data-jos_delay="0">
             , I built an animation
@@ -33,11 +37,19 @@ import web8 from "@/assets/floating_websites/web8.png";
           data-jos_animation="fade-right"
           data-jos_delay="0.2"
         >
-          <div class="jos" data-jos_animation="flip-down" data-jos_delay="0.2">
+          <div
+            class="jos home_de"
+            data-jos_animation="flip-down"
+            data-jos_delay="0.2"
+          >
             library that can instantly
           </div>
 
-          <div class="jos" data-jos_animation="flip-down" data-jos_delay="0.5">
+          <div
+            class="jos home_de"
+            data-jos_animation="flip-down"
+            data-jos_delay="0.5"
+          >
             add life to your websites.
           </div>
         </div>

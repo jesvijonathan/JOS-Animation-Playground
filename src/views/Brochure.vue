@@ -25,7 +25,7 @@ onMounted(() => {
 
   function fancy_text(e) {
     const scroll = e.jos.scrollProgress * 1.4;
-    fanc.style.transform = "translateY(" + e.jos.scrollProgress * 10 + "vw)";
+    fanc.style.transform = "translateY(" + e.jos.scrollProgress * 70 + "vh)";
     fanc.style.opacity = 1 - scroll;
     // fanc.innerHTML = scroll;
   }
@@ -503,16 +503,17 @@ li {
   font-weight: 600;
   font-size: 2.4vw;
   color: var(--color-text);
-  margin-bottom: 1vw;
   width: 100%;
   display: flex;
+
+  margin: 5vw 0vw;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 10vw 0vw;
   font-family: "Poppins", sans-serif;
   transition: 0s;
-  margin-bottom: -7vw;
+  /* margin-bottom: -7vw; */
+  margin-bottom: 25vw;
   z-index: -1 !important;
 }
 </style>

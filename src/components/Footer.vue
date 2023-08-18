@@ -186,7 +186,7 @@ const { FooterNote } = defineProps(["FooterNote"]);
       </div>
       <div class="footer_content_2">
         <div class="footer_rec jos" data-jos_animation="stretch">
-          <a href="" target="_blank">JOS</a>
+          <a href="./#">JOS</a>
           <a
             class="developer"
             href="https://jesvi.pythonanywhere.com/"

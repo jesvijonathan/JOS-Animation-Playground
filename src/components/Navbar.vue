@@ -1,6 +1,8 @@
 <script setup>
 defineProps(["isDark", "navTitle", "curButton"]);
 
+import { ref } from "vue";
+
 let isDark = true;
 function toggleDarkMode(e) {
   isDark = !isDark;
@@ -15,6 +17,25 @@ function toggleDarkMode(e) {
 
 import { useRouter } from "vue-router";
 const router = useRouter();
+
+const hamb_open = ref(false);
+function hamb() {
+  hamb_open.value = !hamb_open.value;
+  if (hamb_open.value) {
+    document.querySelector(".hamb").classList.add("hamb_open");
+    document.querySelector(".hamb_menu").classList.add("hamb_menu_open");
+    document
+      .querySelector(".sub_section_title")
+      .classList.add("sub_section_title_open");
+  } else {
+    document.querySelector(".hamb").classList.remove("hamb_open");
+    document.querySelector(".hamb_menu").classList.remove("hamb_menu_open");
+    document.querySelector(".hamb").style.display = "block";
+    document
+      .querySelector(".sub_section_title")
+      .classList.remove("sub_section_title_open");
+  }
+}
 </script>
 <template>
   <div class="navbar">
@@ -84,6 +105,45 @@ const router = useRouter();
         data-hover_data="Github Repository"
         ><i class="fa-brands fa-github"></i
       ></a>
+    </div>
+
+    <div @click="hamb()" class="hamb hamb_open" style="display: none">
+      <i v-if="!hamb_open" class="fa-solid fa-bars"></i>
+      <i v-if="hamb_open" class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="hamb_menu" style="display: none">
+      <ul>
+        <li>
+          <a href="./#">Home</a>
+        </li>
+        <li>
+          <a href="./playground">Playground</a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/jesvijonathan/JOS-Animation-Library/wiki"
+            target="_blank"
+            >Documentation</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/jesvijonathan/JOS-Animation-Library"
+            target="_blank"
+            >Github</a
+          >
+        </li>
+        <li>
+          <a href="#">Toggle Dark Mode</a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/jesvijonathan/JOS-Animation-Library/wiki#used-in"
+            target="_blank"
+            >Projects</a
+          >
+        </li>
+      </ul>
     </div>
   </div>
 </template>

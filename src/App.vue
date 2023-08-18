@@ -90,7 +90,7 @@ onload = () => {
   });
 
   // if mobile block website
-  if (window.innerWidth < 600) {
+  if (window.innerWidth < 0) {
     document.body.innerHTML = `<div style='
     height: 100%;
         width: 100%;

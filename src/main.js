@@ -10,6 +10,7 @@ import App from "./App.vue";
 import router from "./router";
 
 import "./assets/main.css";
+
 // jos.js and jos.css from jos plugin
 // import "jos/dist/jos.css";
 
@@ -29,3 +30,5 @@ watch(
     });
   }
 );
+
+import "./assets/mobile.css";
