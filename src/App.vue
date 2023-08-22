@@ -89,35 +89,7 @@ onload = () => {
     tooltips.style.transform = `translateX(${clientX.value}) translateY(${clientY.value})`;
   });
 
-  // if mobile block website
-  if (window.innerWidth < 0) {
-    document.body.innerHTML = `<div style='
-    height: 100%;
-        width: 100%;
-        font-size: 3vw;
-        font-family: Poppins, sans-serif;
-        font-weight: 600;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
-        color: var(--color-text);
-        z-index: 10;
-        position: fixed;
-        flex-direction: column;
-        text-align: center;
-        background: var(--color-background);
-  '>
-    Sorry, this website is not available on mobile devices.
-    <br/><br/>
-    Use a desktop or laptop to view this website.
-
-    <a style="margin-top:14vh" href="https://jesvijonathan.github.io/JOS-Animation-Library/"><u>Click to view JOS Demo (old)</u></a>
-  </div>`;
-  }
 };
 
 // Theme
