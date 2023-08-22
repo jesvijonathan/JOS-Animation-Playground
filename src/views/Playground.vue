@@ -41,8 +41,6 @@ onMounted(() => {
   const scrollContainer = document.getElementById("scroll-container");
 });
 
-const refe = ref(true);
-
 let marginBorder = ref(false);
 
 let plg_opt = ref("animation");
@@ -52,6 +50,13 @@ function change_rootBorder() {
 }
 
 window["change_rootBorder_ref"] = change_rootBorder;
+
+let refe = ref(true);
+function remove_loading_text() {
+  refe.value = false;
+  console.log("removed");
+}
+window["remove_loading_text"] = remove_loading_text;
 </script>
 
 <template>
@@ -83,12 +88,22 @@ window["change_rootBorder_ref"] = change_rootBorder;
     onload='
     this.style.height = this.contentWindow.document.body.scrollHeight + "px";
     this.contentWindow.document.querySelector("html").style.overflow = "hidden";
-  '
+    remove_loading_text()
+    
+'
     src="./PlaygroundFrame"
   ></iframe>
+
+  <div v-if="refe" class="loa-d">Playground is loading...</div>
 </template>
 <style scoped>
 /* checkbox style */
+.loa-d {
+  width: 100%;
+  font-size: 3rem;
+  text-align: center;
+  margin: 5rem 0;
+}
 .rootMargin_Border {
   position: fixed;
   top: 0;

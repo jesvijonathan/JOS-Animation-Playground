@@ -114,10 +114,10 @@ function hamb() {
     <div class="hamb_menu" style="display: none">
       <ul>
         <li>
-          <a href="./#">Home</a>
+          <a @click="router.push('/#')">Home</a>
         </li>
         <li>
-          <a href="./playground">Playground</a>
+          <a @click="router.push('/Playground')">Playground</a>
         </li>
         <li>
           <a
@@ -134,7 +134,7 @@ function hamb() {
           >
         </li>
         <li>
-          <a href="#">Toggle Dark Mode</a>
+          <a @click="toggleDarkMode()">Toggle Dark Mode</a>
         </li>
         <li>
           <a

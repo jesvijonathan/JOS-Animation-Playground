@@ -1,13 +1,13 @@
 <script setup>
 //"@/assets/floating_websites/web1"
-import web1 from "@/assets/floating_websites/web1.png";
-import web2 from "@/assets/floating_websites/web2.png";
-import web3 from "@/assets/floating_websites/web3.png";
-import web4 from "@/assets/floating_websites/web4.png";
-import web5 from "@/assets/floating_websites/web5.png";
-import web6 from "@/assets/floating_websites/web6.png";
-import web7 from "@/assets/floating_websites/web7.png";
-import web8 from "@/assets/floating_websites/web8.png";
+import web1 from "@/assets/floating_websites/web1.webp";
+import web2 from "@/assets/floating_websites/web2.webp";
+import web3 from "@/assets/floating_websites/web3.webp";
+import web4 from "@/assets/floating_websites/web4.webp";
+import web5 from "@/assets/floating_websites/web5.webp";
+import web6 from "@/assets/floating_websites/web6.webp";
+import web7 from "@/assets/floating_websites/web7.webp";
+import web8 from "@/assets/floating_websites/web8.webp";
 </script>
 
 <template>
@@ -136,7 +136,7 @@ import web8 from "@/assets/floating_websites/web8.png";
   height: 14vw;
   bottom: -20%;
   left: 0%;
-  background-image: url("@/assets/floating_websites/web1.png");
+  background-image: url("@/assets/floating_websites/web1.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -150,7 +150,7 @@ import web8 from "@/assets/floating_websites/web8.png";
   bottom: -20%;
   left: 40%;
   background-color: #9c9c9c;
-  background-image: url("@/assets/floating_websites/web2.png");
+  background-image: url("@/assets/floating_websites/web2.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -164,7 +164,7 @@ import web8 from "@/assets/floating_websites/web8.png";
   bottom: -50%;
   left: 20%;
   background-color: #464646;
-  background-image: url("@/assets/floating_websites/web6.png");
+  background-image: url("@/assets/floating_websites/web6.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -179,7 +179,7 @@ import web8 from "@/assets/floating_websites/web8.png";
   left: 30%;
   z-index: 1;
   background-color: #9c9c9c;
-  background-image: url("@/assets/floating_websites/web5.png");
+  background-image: url("@/assets/floating_websites/web5.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -192,7 +192,7 @@ import web8 from "@/assets/floating_websites/web8.png";
   height: 17vw;
   bottom: -133%;
   left: 20%;
-  background-image: url("@/assets/floating_websites/web4.png");
+  background-image: url("@/assets/floating_websites/web4.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -204,10 +204,10 @@ import web8 from "@/assets/floating_websites/web8.png";
 .piece_6 {
   height: 10vw;
   width: 42vw;
-  background-image: url("@/assets/floating_websites/web3.png");
+  background-image: url("@/assets/floating_websites/web3.webp");
 }
 .piece_7 {
-  background-image: url("@/assets/floating_websites/web7.png");
+  background-image: url("@/assets/floating_websites/web7.webp");
 }
 .showcase_it {
   position: absolute;

@@ -2,9 +2,10 @@
 
 # jos-animation-playground
 
-Playground for tesing [JOS-animation's](https://github.com/jesvijonathan/JOS-Animation-Library) features ;)
+Playground for tesing [JOS-animation's](https://github.com/jesvinathan/JOS-Animation-Library) features ;)
 
-(Under Development : [View Here](https://jos-animation.vercel.app/)
+(View here : [View Here](https://jos-animation.vercel.app)
+
 <!-- https://jesvijonathan.github.io/JOS-Animation-Playground/ -->
 
 <a
