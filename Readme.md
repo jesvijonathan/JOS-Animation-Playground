@@ -4,7 +4,7 @@
 
 Playground for tesing [JOS-animation's](https://github.com/jesvinathan/JOS-Animation-Library) features ;)
 
-(View here : [View Here](https://jos-animation.vercel.app)
+(View JOS Demo here : [View Here](https://jos-animation.vercel.app))
 
 <!-- https://jesvijonathan.github.io/JOS-Animation-Playground/ -->
 
