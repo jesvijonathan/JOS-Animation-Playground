@@ -552,4 +552,7 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  .step1_demo_text {
+    flex-wrap: wrap !important;
+  }
 }
