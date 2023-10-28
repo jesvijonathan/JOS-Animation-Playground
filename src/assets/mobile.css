@@ -238,6 +238,7 @@
   }
   .step1_demo_text {
     font-size: 0.5rem !important;
+    flex-wrap: wrap !important;
     padding: 0.6rem 0.4rem !important;
   }
   .step1_demo {
@@ -551,8 +552,5 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  .step1_demo_text {
-    flex-wrap: wrap !important;
   }
 }
