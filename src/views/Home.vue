@@ -127,6 +127,13 @@ import web8 from "@/assets/floating_websites/web8.webp";
         ></a>
       </div>
     </div>
+
+    <a
+      href="https://github.com/jesvijonathan/JOS-Animation-Library/releases"
+      target="_blank"
+      class="ver_tag"
+      >Version : 0.9.0</a
+    >
   </section>
 </template>
 
@@ -240,6 +247,26 @@ import web8 from "@/assets/floating_websites/web8.webp";
     opacity: 0;
     transform: translateY(-125vh);
   }
+}
+
+.ver_tag {
+  font-size: 0.6vw;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  color: rgba(255, 255, 255, 0.2);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.4vw 3.2vw;
+
+  position: absolute;
+  /* show in bottom left corner */
+  bottom: 0;
+  left: 0;
+  transform: translate(0, 0%);
+}
+.ver_tag:hover {
+  text-decoration: underline;
 }
 .home_showcase {
   position: absolute;

@@ -79,7 +79,14 @@ onMounted(() => {
               we will go with the most basic approach to get JOS up and running
               <br /><br />
             </div>
-            <div class="step_code_con">
+            <div
+              class="step_code_con jos"
+              data-jos_animation="fade-up"
+              data-jos_duration="0.2"
+              data-jos_delay="0"
+              data-jos_rootMargin_bottom="20%"
+              data-jos_scrollDirection="down"
+            >
               <div class="step1_demo_text">
                 Add the link inside the head tag :
               </div>
@@ -97,7 +104,14 @@ onMounted(() => {
                 ></button>
               </div>
             </div>
-            <div class="step_code_con">
+            <div
+              class="step_code_con jos"
+              data-jos_animation="fade-up"
+              data-jos_duration="0.2"
+              data-jos_delay="0"
+              data-jos_rootMargin_bottom="20%"
+              data-jos_scrollDirection="down"
+            >
               <div class="step1_demo_text">
                 Add the script right after the body tag :
               </div>
@@ -115,16 +129,57 @@ onMounted(() => {
               </div>
             </div>
 
-            <div class="step_code_con">
+            <div
+              class="step_code_con jos"
+              data-jos_animation="fade-up"
+              data-jos_duration="0.2"
+              data-jos_delay="0"
+              data-jos_rootMargin_bottom="20%"
+              data-jos_scrollDirection="down"
+            >
               <div class="step1_demo_text">
                 <br />
                 <br />
-                (Or) You can npm install jos and import it in your project :
+                (Or) You can &nbsp;
+                <a
+                  href="https://www.npmjs.com/package/jos-animation?activeTab=versions"
+                  target="_blank"
+                  ><u>npm install jos</u></a
+                >
+                &nbsp; in your project &nbsp;
+                <a
+                  href="https://github.com/jesvijonathan/JOS-Animation-Library/issues/15"
+                  target="_blank"
+                  >(check<b> framework support</b>)</a
+                >&nbsp; :
               </div>
               <div class="step1_demo">
                 <pre class="step1_demo_code">
   <code>
     npm i jos-animation
+  </code>
+                </pre>
+
+                <button
+                  class="jos copy_but fa-regular fa-clipboard"
+                  data-hover_data="Copy"
+                  @click="copy($event.target)"
+                ></button>
+              </div>
+            </div>
+            <div
+              class="step_code_con jos"
+              data-jos_animation="fade-up"
+              data-jos_duration="0.2"
+              data-jos_delay="0"
+              data-jos_rootMargin_bottom="20%"
+              data-jos_scrollDirection="down"
+            >
+              <div class="step1_demo_text">& import it in your project</div>
+              <div class="step1_demo">
+                <pre class="step1_demo_code">
+  <code>
+    import JOS from "jos-animation";
   </code>
                 </pre>
 
@@ -151,7 +206,14 @@ onMounted(() => {
               There are two ways to initialize JOS
               <br /><br />
             </div>
-            <div class="step_code_con">
+            <div
+              class="step_code_con jos"
+              data-jos_animation="fade-up"
+              data-jos_duration="0.2"
+              data-jos_delay="0"
+              data-jos_rootMargin_bottom="20%"
+              data-jos_scrollDirection="down"
+            >
               <div class="step1_demo_text">
                 Use JOS.init(); to initialize the library with default settings.
               </div>
@@ -168,7 +230,14 @@ onMounted(() => {
                 ></button>
               </div>
             </div>
-            <div class="step_code_con">
+            <div
+              class="step_code_con jos"
+              data-jos_animation="fade-up"
+              data-jos_duration="0.2"
+              data-jos_delay="0"
+              data-jos_rootMargin_bottom="20%"
+              data-jos_scrollDirection="down"
+            >
               <div class="step1_demo_text">
                 <br />
                 <br />
@@ -201,7 +270,14 @@ onMounted(() => {
               We now animate elements by adding the class="jos" to the element
               <br /><br />
             </div>
-            <div class="step_code_con">
+            <div
+              class="step_code_con jos"
+              data-jos_animation="fade-up"
+              data-jos_duration="0.2"
+              data-jos_delay="0"
+              data-jos_rootMargin_bottom="20%"
+              data-jos_scrollDirection="down"
+            >
               <div
                 class="step1_demo_text jos"
                 data-jos_animation="no-transition"
@@ -224,7 +300,14 @@ onMounted(() => {
                 ></button>
               </div>
             </div>
-            <div class="step_code_con">
+            <div
+              class="step_code_con jos"
+              data-jos_animation="fade-up"
+              data-jos_duration="0.2"
+              data-jos_delay="0"
+              data-jos_rootMargin_bottom="20%"
+              data-jos_scrollDirection="down"
+            >
               <div class="step1_demo_text">
                 <br />
                 <br />
@@ -248,7 +331,12 @@ onMounted(() => {
           </div>
 
           <div class="line"></div>
-          <div class="butvon">
+          <div
+            class="butvon jos"
+            data-jos_duration="0.5"
+            data-jos_delay="0"
+            data-jos_rootMargin_bottom="10%"
+          >
             <a
               href="https://www.youtube.com/watch?v=ziR95EKKttc"
               target="_blank"
@@ -490,6 +578,11 @@ onMounted(() => {
   text-align: justify;
   width: 100%;
   padding: 1vw;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  place-content: center flex-start;
 }
 .step1_demo {
   width: 100%;

@@ -41,14 +41,33 @@ onMounted(() => {
             class="intro_2 jos"
             data-jos_animation="no-transition"
           >
-            <div class="intro_title">Scroll Trigger Animation</div>
-            <div class="intro_desc">
+            <div
+              class="intro_title jos"
+              data-jos_animation="zoom-in"
+              data-jos_duration="0.8"
+              data-jos_delay="0"
+              data-jos_rootMargin_bottom="20%"
+            >
+              Scroll Trigger Animation
+            </div>
+            <div
+              class="intro_desc jos"
+              data-jos_animation="fade-right"
+              data-jos_duration="0.5"
+              data-jos_delay="0"
+              data-jos_rootMargin_bottom="20%"
+              data-jos_scrollDirection="down"
+            >
               Use JOS to add instant animation to elements of your website via
               scroll intersection, scroll progress, scroll anchors points, etc.
             </div>
             <div
               class="intro_desc jos"
-              data-jos_animation="no-transition"
+              data-jos_animation="fade-right"
+              data-jos_duration="0.5"
+              data-jos_delay="0"
+              data-jos_rootMargin_bottom="20%"
+              data-jos_scrollDirection="down"
               data-jos_invoke="heading"
               data-nextScroll="installation"
               data-intro_title="Demo"
@@ -57,14 +76,26 @@ onMounted(() => {
               port. This allows users to to animate an element with reference to
               the view port alone, making it easier for animating
             </div>
-            <div class="intro_desc">
+            <div
+              class="intro_desc jos"
+              data-jos_animation="fade-right"
+              data-jos_duration="0.5"
+              data-jos_delay="0"
+              data-jos_rootMargin_bottom="20%"
+              data-jos_scrollDirection="down"
+            >
               JOS library comes with tons of inbuilt presets that can be used to
               add beautiful animations. You can also customize the animation and
               its function for every element individually for all elements. It
               comes with a lot more customizable attributes and options to tweak
               and fiddle with.
             </div>
-            <div class="feature_button">
+            <div
+              class="feature_button jos"
+              data-jos_duration="0.5"
+              data-jos_delay="0"
+              data-jos_rootMargin_bottom="10%"
+            >
               <button class="button" @click="router.push('/playground')">
                 Demo
               </button>
@@ -88,13 +119,35 @@ onMounted(() => {
             ></div>
           </div>
           <div id="intro_2" class="intro_2">
-            <div class="intro_title">Scroll Progress Animation</div>
-            <div class="intro_desc">
+            <div
+              class="intro_title jos"
+              data-jos_animation="zoom-in"
+              data-jos_duration="0.8"
+              data-jos_delay="0"
+              data-jos_rootMargin_bottom="20%"
+            >
+              Scroll Progress Animation
+            </div>
+            <div
+              class="intro_desc jos"
+              data-jos_animation="fade-right"
+              data-jos_duration="0.5"
+              data-jos_delay="0"
+              data-jos_rootMargin_bottom="20%"
+              data-jos_scrollDirection="down"
+            >
               JOS, on top of scroll trigger animation supports Scroll Progress
               callbacks to handle animation and other function depending on the
               scroll percent of element in the view port
             </div>
-            <div class="intro_desc">
+            <div
+              class="intro_desc jos"
+              data-jos_animation="fade-right"
+              data-jos_duration="0.5"
+              data-jos_delay="0"
+              data-jos_rootMargin_bottom="20%"
+              data-jos_scrollDirection="down"
+            >
               This feature enables the capability for adding scroll based
               animation that works with respect to scroll percent of element.
               This can also be used to add futuristic features in a web app
@@ -102,7 +155,11 @@ onMounted(() => {
             </div>
             <div
               class="intro_desc jos"
-              data-jos_animation="no-transition"
+              data-jos_animation="fade-right"
+              data-jos_duration="0.5"
+              data-jos_delay="0"
+              data-jos_rootMargin_bottom="20%"
+              data-jos_scrollDirection="down"
               data-jos_invoke="heading"
               data-nextScroll="installation"
               data-intro_title="Demo"
@@ -111,7 +168,12 @@ onMounted(() => {
               animation features are all packaged into a single library and
               comes in a very light weight (2kb) package...
             </div>
-            <div class="feature_button">
+            <div
+              class="feature_button jos"
+              data-jos_duration="0.5"
+              data-jos_delay="0"
+              data-jos_rootMargin_bottom="10%"
+            >
               <a
                 class="button"
                 href="https://github.com/jesvijonathan/JOS-Animation-Library/wiki"
