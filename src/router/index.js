@@ -37,13 +37,13 @@ const router = createRouter({
       component: PlaygroundFrame,
     },
     {
-      path: "/privacy-policy",
-      name: "privacy-policy",
-      component: privacy,
-    },
-    {
       path: "/demo",
       redirect: "https://jesvijonathan.github.io/JOS-Animation-Library/",
+    },
+    {
+      path: "/privacy-policy",
+      name: "privacy-policy",
+      component: Privacy,
     },
 
     {
