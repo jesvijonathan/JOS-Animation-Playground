@@ -191,7 +191,7 @@
   }
   .intro_desc {
     font-size: 0.8rem !important;
-    opacity: 0.8 !important;
+    opacity: 0.8;
     margin: 1.3rem !important;
     margin-top: 0.4rem !important;
     margin-bottom: 0.2rem !important;
@@ -238,6 +238,7 @@
   }
   .step1_demo_text {
     font-size: 0.5rem !important;
+    flex-wrap: wrap !important;
     padding: 0.6rem 0.4rem !important;
   }
   .step1_demo {
@@ -360,6 +361,7 @@
     font-size: 1.8rem !important;
     height: 3.7rem !important;
     width: 3.7rem !important;
+    background-color: transparent;
   }
   .circ_lo i {
     height: 1.8rem !important;
@@ -532,5 +534,23 @@
     align-items: center !important;
     height: 3rem !important;
     width: 3rem !important;
+  }
+  .home_showcase {
+    display: none !important;
+  }
+  .ver_tag {
+    /* center */
+    position: absolute;
+    left: 50% !important;
+    transform: translate(-50%, 0%) !important;
+    padding: 0 !important;
+    font-size: 0.6rem !important;
+    opacity: 0.3 !important;
+  }
+  .step1_demo_text a {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
