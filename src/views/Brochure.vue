@@ -64,14 +64,17 @@ const router = useRouter();
     <div class="features" id="features">
       <div class="features-container">
         <div class="features-title">Features</div>
-        <div class="features-list">
+        <div
+          class="features-list jos"
+          data-jos_stagger="skew-left"
+          data-jos_stagger_seq="0.1"
+          data-jos_stagger_duration="0.5"
+          data-jos_stagger_mirror="false"
+        >
           <div
-            class="features-list-item jos"
-            data-jos_delay="0"
-            data-jos_duration="0.5"
+            class="features-list-item"
             data-jos_rootMargin_bottom="40%"
             data-jos_scrollDirection="down"
-            data-jos_animation="fade-down"
           >
             <!-- box image -->
 
@@ -92,14 +95,11 @@ const router = useRouter();
               </ul>
             </div>
           </div>
-          <div class="line"></div>
+
           <div
-            class="features-list-item jos"
-            data-jos_delay="0.1"
-            data-jos_duration="0.5"
+            class="features-list-item"
             data-jos_rootMargin_bottom="40%"
             data-jos_scrollDirection="down"
-            data-jos_animation="fade-down"
           >
             <img class="fe_img" src="@/assets/custom.jpg" alt="" />
             <div class="features-list-item-title">Customizability</div>
@@ -111,14 +111,11 @@ const router = useRouter();
               </ul>
             </div>
           </div>
-          <div class="line"></div>
+
           <div
-            class="features-list-item jos"
-            data-jos_delay="0.2"
-            data-jos_duration="0.5"
+            class="features-list-item"
             data-jos_rootMargin_bottom="40%"
             data-jos_scrollDirection="down"
-            data-jos_animation="fade-down"
           >
             <img class="fe_img" src="@/assets/easytouse.jpg" alt="" />
             <div class="features-list-item-title">Easy to use</div>
@@ -132,14 +129,11 @@ const router = useRouter();
               </ul>
             </div>
           </div>
-          <div class="line"></div>
+
           <div
-            class="features-list-item jos"
-            data-jos_delay="0.3"
-            data-jos_duration="0.5"
+            class="features-list-item"
             data-jos_rootMargin_bottom="40%"
             data-jos_scrollDirection="down"
-            data-jos_animation="fade-down"
           >
             <!-- related picture -->
             <img class="fe_img" src="@/assets/opensource.png" alt="" />

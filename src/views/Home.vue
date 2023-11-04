@@ -132,7 +132,7 @@ import web8 from "@/assets/floating_websites/web8.webp";
       href="https://github.com/jesvijonathan/JOS-Animation-Library/releases"
       target="_blank"
       class="ver_tag"
-      >Version : 0.9.0</a
+      >Version : 0.9.1</a
     >
   </section>
 </template>

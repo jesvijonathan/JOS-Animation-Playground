@@ -9,7 +9,7 @@ import JOS from "jos-animation";
 const { loader } = defineProps(["loader"]);
 changeCurButton("Home");
 
-const version = ref("0.9.0");
+const version = ref("0.9.1");
 
 const init = ref(0);
 const stop = ref(-1);
@@ -821,7 +821,8 @@ window["refree"] = refre;
             <option value="0.7" disabled>0.7</option>
             <option value="0.8.1" disabled>0.8.1</option>
             <option value="0.8.8" disabled>0.8.8</option>
-            <option value="0.9.0" selected>0.9.0</option>
+            <option value="0.9.0" disabled>0.9.0</option>
+            <option value="0.9.1" selected>0.9.1</option>
           </select>
         </div>
       </div>

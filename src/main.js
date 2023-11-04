@@ -1,7 +1,6 @@
 import { createApp } from "vue";
 import { watch, nextTick } from "vue";
 
-import "jos-animation/dist/jos.css";
 import JOS from "jos-animation";
 
 import "@fortawesome/fontawesome-free/css/all.css";
