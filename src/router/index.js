@@ -4,6 +4,7 @@ import Root from "@/views/Root.vue";
 import Playground from "@/views/Playground.vue";
 import PlaygroundFrame from "@/views/PlaygroundFrame.vue";
 import PathNotFound from "@/views/PathNotFound.vue";
+import Privacy from "@/views/Privacy.vue";
 
 // "/" should redirect to "/home"
 
@@ -38,6 +39,11 @@ const router = createRouter({
     {
       path: "/demo",
       redirect: "https://jesvijonathan.github.io/JOS-Animation-Library/",
+    },
+    {
+      path: "/privacy-policy",
+      name: "privacy-policy",
+      component: Privacy,
     },
 
     {
