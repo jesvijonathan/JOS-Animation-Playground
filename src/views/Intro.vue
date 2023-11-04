@@ -12,6 +12,11 @@ onMounted(() => {
   let box = document.getElementById("box2");
   function scroll_rel(e) {
     const scroll = (1 - e.jos.scrollProgress).toFixed(2);
+    if (scroll >= 1) {
+      scroll = 1;
+    } else if (scroll < 0) {
+      scroll = 0;
+    }
     box.style.transform = "scale(" + scroll + ")";
     box.innerHTML = scroll + "%";
   }
