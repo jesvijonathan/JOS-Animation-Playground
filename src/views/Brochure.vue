@@ -68,8 +68,8 @@ const router = useRouter();
           class="features-list jos"
           data-jos_stagger="skew-left"
           data-jos_stagger_seq="0.1"
-          data-jos_stagger_duration="0.5"
-          data-jos_stagger_mirror="false"
+          data-jos_stagger_duration="0.6"
+          data-jos_stagger_mirror="true"
         >
           <div
             class="features-list-item"

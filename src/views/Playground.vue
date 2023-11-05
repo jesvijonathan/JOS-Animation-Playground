@@ -9,6 +9,11 @@ import JOS from "jos-animation";
 const { loader } = defineProps(["loader"]);
 changeCurButton("Home");
 
+function scrollToNext() {
+  const next = document.querySelector("#dynamicIframe");
+  next.scrollIntoView({ behavior: "smooth" });
+}
+
 // nig = {
 //   disable: false,
 //   debugMode: true,
@@ -78,8 +83,11 @@ window["remove_loading_text"] = remove_loading_text;
         <a href="https://codepen.io/jesvijonathan/pen/XWyLejd" target="_blank"
           >CodePen Examples</a
         >
+
         <a>Try In Sandbox</a>
-        <a>Playground <i class="fa fa-1 fa-arrow-down"></i></a>
+        <a @click="scrollToNext($el)" data-hover_data="dynamicIframe"
+          >Playground <i class="fa fa-1 fa-arrow-down"></i
+        ></a>
       </div>
     </div>
   </section>

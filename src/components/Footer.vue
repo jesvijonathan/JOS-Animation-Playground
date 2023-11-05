@@ -26,6 +26,7 @@ const { FooterNote } = defineProps(["FooterNote"]);
               data-nextScroll="introduction"
               data-jos_animation="flip"
               data-jos_delay="0"
+              data-jos_rootMargin_bottom="20%"
               href="https://github.com/jesvijonathan/JOS-Animation-Library"
               target="_blank"
             >
@@ -35,6 +36,7 @@ const { FooterNote } = defineProps(["FooterNote"]);
               class="circ_lo jos"
               data-jos_animation="flip"
               data-jos_delay="0.1"
+              data-jos_rootMargin_bottom="20%"
               href="https://codepen.io/jesvijonathan/pen/XWyLejd"
               target="_blank"
             >
@@ -44,6 +46,7 @@ const { FooterNote } = defineProps(["FooterNote"]);
               class="circ_lo jos"
               data-jos_animation="flip"
               data-jos_delay="0.2"
+              data-jos_rootMargin_bottom="20%"
               href="https://www.npmjs.com/package/jos-animation"
               target="_blank"
             >
@@ -54,6 +57,7 @@ const { FooterNote } = defineProps(["FooterNote"]);
             <div
               class="foot_ser jos"
               data-jos_animation="fade-left"
+              data-jos_rootMargin_bottom="20%"
               data-jos_delay="0"
             >
               <div class="foot_ser_title">About JOS</div>
@@ -95,6 +99,7 @@ const { FooterNote } = defineProps(["FooterNote"]);
               class="foot_ser jos"
               data-jos_animation="fade-left"
               data-jos_delay="0.1"
+              data-jos_rootMargin_bottom="20%"
             >
               <div class="foot_ser_title">Useful Links</div>
               <div class="foot_ser_content">
@@ -140,6 +145,7 @@ const { FooterNote } = defineProps(["FooterNote"]);
             <div
               class="foot_ser jos"
               data-jos_animation="fade-left"
+              data-jos_rootMargin_bottom="20%"
               data-jos_delay="0.2"
               style="margin-right: 2vw"
             >
@@ -185,7 +191,11 @@ const { FooterNote } = defineProps(["FooterNote"]);
         </div>
       </div>
       <div class="footer_content_2">
-        <div class="footer_rec jos" data-jos_animation="stretch">
+        <div
+          class="footer_rec jos"
+          data-jos_animation="stretch"
+          data-jos_rootMargin_bottom="10%"
+        >
           <a href="./#">JOS</a>
           <a
             class="developer"
