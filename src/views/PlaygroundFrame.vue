@@ -33,10 +33,10 @@ const default_option = {
   timingFunction: "ease",
   once: false,
   mirror: true,
-  scrollDirection: "none",
+  scrolldirection: "down",
   startVisible: false,
   scrollProgressDisable: false,
-  animationInverse: "",
+  animationinverse: "none",
   threshold: 0,
   intersectionRatio: 0,
 
@@ -62,10 +62,10 @@ let option = ref({
   timingFunction: "ease",
   once: false,
   mirror: true,
-  scrollDirection: "none",
+  scrolldirection: "down",
   startVisible: false,
   scrollProgressDisable: false,
-  animationInverse: "", //
+  animationinverse: "none", //
   threshold: 0, //
   intersectionRatio: "", //
 
@@ -140,7 +140,7 @@ window["refree"] = refre;
       data-jos_duration="0.5"
       data-jos_once="false"
       data-jos_delay="0"
-      data-jos_animationInverse=""
+      data-jos_animationinverse="none"
       data-jos_timingFunction="ease"
       data-jos_mirror="true"
       data-jos_scrollDirection="none"
@@ -217,7 +217,7 @@ window["refree"] = refre;
       data-jos_duration="0.5"
       data-jos_once="false"
       data-jos_delay="0"
-      data-jos_animationInverse=""
+      data-jos_animationinverse="none"
       data-jos_timingFunction="ease"
       data-jos_mirror="true"
       data-jos_scrollDirection="none"
@@ -513,12 +513,12 @@ window["refree"] = refre;
       <!-- animatioin inverse -->
       <div class="opt">
         <div class="opt_inside">
-          <label for="animationInverse">Animation Inverse : </label>
+          <label for="animationinverse">Animation Inverse : </label>
           <!-- select -->
           <select
-            name="animationInverse"
-            id="animationInverse"
-            v-model="option.animationInverse"
+            name="animationinverse"
+            id="animationinverse"
+            v-model="option.animationinverse"
           >
             <option value="" selected>none</option>
             <option value="static">static</option>

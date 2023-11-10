@@ -11,7 +11,7 @@ onMounted(() => {
   let section = document.getElementById("features");
   let box = document.getElementById("box2");
   function scroll_rel(e) {
-    const scroll = (1 - e.jos.scrollProgress).toFixed(2);
+    let scroll = (1 - e.jos.scrollProgress).toFixed(2);
     if (scroll < 0) {
       scroll = 0;
     }
@@ -233,10 +233,11 @@ onMounted(() => {
   justify-content: center;
   align-content: center;
   font-size: 1.8vw;
-  transition: 0s;
 }
 #box2 {
   margin-top: 0vw;
+
+  transition: 0s !important;
 }
 .intreo {
   margin: 10vw 0vw 0vw 0vw;

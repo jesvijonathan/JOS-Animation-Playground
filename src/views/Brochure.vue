@@ -46,6 +46,7 @@ const router = useRouter();
       data-jos_scroll="fancy_text"
       data-jos_animation="static"
       data-jos_rootMargin_top="0%"
+      data-jos_duration="0"
       data-jos_rootMargin_bottom="0%"
     >
       <div style="width: 60%; text-align: center; z-index: -1">
@@ -319,7 +320,7 @@ const router = useRouter();
 
 #scroller2 {
   background-color: transparent;
-  transition: 0s ease-out;
+  transition: 0s ease-out !important;
   margin: 6vw 0vw 3vw 0vw;
 }
 

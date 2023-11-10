@@ -75,7 +75,10 @@ window["remove_loading_text"] = remove_loading_text;
       <div class="bold_tes">Play & fiddle with JOS settings</div>
       <div
         class="sandb_but jos"
-        data-jos_animation="no-transition"
+        data-jos_stagger="skew-right"
+        data-jos_stagger_seq="0.2"
+        data-jos_stagger_duration="0.4"
+        data-jos_stagger_mirror="false"
         data-jos_invoke="heading"
         data-nextScroll="dynamicIframe"
         data-intro_title="Playground"
